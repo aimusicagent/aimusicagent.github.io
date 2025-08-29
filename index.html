@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From Generation to Attribution: Music AI Agent Architectures for the Post-Streaming Era | Music Generation
+        Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* 색상 변수 */
+            --color-text-primary: #111827;
+            --color-text-secondary: #6b7280;
+            --color-border: #e5e7eb;
+            --color-background-page: #f9fafb;
+            --color-background-card: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            background-color: var(--color-background-page);
+            color: var(--color-text-primary);
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 4rem auto;
+            padding: 2rem;
+        }
+
+        /* --- 상단 논문 정보 --- */
+        header {
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            letter-spacing: -1px;
+            margin-bottom: 0.75rem;
+        }
+
+        .authors,
+        .affiliations {
+            text-align: center;
+            color: var(--color-text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .affiliations {
+            font-size: 0.9rem;
+        }
+
+        .abstract {
+            background-color: var(--color-background-card);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid var(--color-border);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+
+        .abstract h2 {
+            font-size: 1.25rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        /* --- 예제 섹션 --- */
+        .example>h3 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            padding-bottom: 1rem;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        /* --- 스텝 레이아웃 --- */
+        .step {
+            background-color: var(--color-background-card);
+            border-radius: 16px;
+            border: 1px solid var(--color-border);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .step-header {
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .step-header h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0;
+            letter-spacing: -0.5px;
+        }
+
+        .step-content {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+        }
+
+        .left-column {
+            border-right: 1px solid var(--color-border);
+        }
+
+        .left-column>div.label-wrapper {
+            padding: 1rem 1.5rem;
+            font-weight: 500;
+            color: var(--color-text-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* 오른쪽 컬럼 콘텐츠 */
+        .right-column>div.content-wrapper {
+            padding: 1rem 0 1rem 2.5rem;
+            border-bottom: 1px solid var(--color-border);
+            display: flex;
+            align-items: center;
+        }
+
+        .right-column>div.content-wrapper>* {
+            width: 100%;
+        }
+
+        .right-column>div.content-wrapper:last-child {
+            border-bottom: none;
+        }
+
+        .right-column p {
+            margin: 0;
+        }
+
+        /* --- 오디오 섹션 --- */
+        .audio-section {
+            display: grid;
+            grid-template-columns: auto 1fr 1fr;
+            gap: 1.25rem 2rem;
+            align-items: center;
+        }
+
+        .audio-section .header {
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+            text-align: left;
+        }
+
+        .audio-section .label {
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-align: left;
+        }
+
+        audio {
+            width: 100%;
+            height: 40px;
+        }
+
+        /* Mixed audio 섹션 스타일 수정 */
+        .mixed-audio-section {
+            /* padding-top: 1rem; */
+            /* 이 padding은 content-wrapper에서 제어 */
+        }
+
+        .mixed-audio-header {
+            text-align: center;
+            margin-bottom: 0.75rem;
+            /* 스타일 통일 */
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+        }
+
+        /* 여백 조정을 위한 헬퍼 클래스 */
+        .pt-tight {
+            padding-top: 0.75rem !important;
+        }
+
+        .pb-tight {
+            padding-bottom: 0.75rem !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>From Generation to Attribution: Music AI Agent Architectures for the Post-Streaming Era</h1>
+            <p class="authors">Anonymous Author(s)</p>
+            <p class="affiliations">Anonymous Affiliation(s)</p>
+        </header>
+
+        <main>
+            <section class="abstract">
+                <h2>Abstract</h2>
+                <p>abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstractabstractabstractabstract
+                    abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract
+                    abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract
+            </section>
+
+            <section class="example">
+                <h3>Examples</h3>
+
+                <div class="step">
+                    <div class="step-header">
+                        <h4>Step 1</h4>
+                    </div>
+
+                    <div class="step-content">
+                        <div class="left-column">
+                            <div class="label-wrapper">User Prompt</div>
+                            <div class="label-wrapper">Answer</div>
+                            <div class="label-wrapper">Audio Results</div>
+                            <div class="label-wrapper">Selected Output</div>
+                        </div>
+                        <div class="right-column">
+                            <div class="content-wrapper">
+                                <p>PromptPromptPromptPromptPrompt</p>
+                            </div>
+                            <div class="content-wrapper">
+                                <p>AnswerAnswerAnswerAnswerAnswer<br>AnswerAnswerAnswerAnswerAnswer</p>
+                            </div>
+                            <div class="content-wrapper pb-tight">
+                                <div class="audio-section">
+                                    <div></div>
+                                    <div class="header">Generated audio</div>
+                                    <div class="header">Reference Audio</div>
+
+                                    <div class="label">Drum 1</div>
+                                    <audio controls src="audio/placeholder.mp3"></audio>
+                                    <audio controls src="audio/placeholder.mp3"></audio>
+
+                                    <div class="label">Drum 2</div>
+                                    <audio controls src="audio/placeholder.mp3"></audio>
+                                    <audio controls src="audio/placeholder.mp3"></audio>
+
+                                    <div class="label">Drum 3</div>
+                                    <audio controls src="audio/placeholder.mp3"></audio>
+                                    <audio controls src="audio/placeholder.mp3"></audio>
+
+                                    <div class="label">Drum 4</div>
+                                    <audio controls src="audio/placeholder.mp3"></audio>
+                                    <audio controls src="audio/placeholder.mp3"></audio>
+                                </div>
+                            </div>
+                            <div class="content-wrapper pt-tight pb-tight">
+                                <div class="mixed-audio-section">
+                                    <div class="mixed-audio-header">Mixed audio</div>
+                                    <audio controls src="audio/placeholder.mp3"></audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script>
+            function alignRows() {
+                const steps = document.querySelectorAll('.step');
+
+                steps.forEach(step => {
+                    const labels = step.querySelectorAll('.left-column > .label-wrapper');
+                    const contents = step.querySelectorAll('.right-column > .content-wrapper');
+
+                    if (labels.length === contents.length) {
+                        labels.forEach(label => label.style.height = 'auto');
+
+                        for (let i = 0; i < labels.length; i++) {
+                            const labelHeight = labels[i].offsetHeight;
+                            const contentHeight = contents[i].offsetHeight;
+                            const maxHeight = Math.max(labelHeight, contentHeight);
+
+                            labels[i].style.height = `${maxHeight}px`;
+                            contents[i].style.height = `${maxHeight}px`;
+                        }
+                    }
+                });
+            }
+            window.addEventListener('load', alignRows);
+            window.addEventListener('resize', alignRows);
+        </script>
+    </div>
+
+</body>
+
+</html>
