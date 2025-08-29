@@ -335,6 +335,22 @@
         .audio-player-wrapper {
             width: 100%;
         }
+
+        /* --- 워크플로우 이미지 스타일 --- */
+        .workflow-container {
+            text-align: center;
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--color-border-light);
+        }
+
+        .workflow-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px var(--color-shadow-light), 0 2px 8px var(--color-shadow-medium);
+            border: 1px solid var(--color-border-light);
+        }
     </style>
 </head>
 
@@ -353,6 +369,11 @@
                 <p>abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstractabstractabstractabstract
                     abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract
                     abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract
+                </p>
+                
+                <div class="workflow-container">
+                    <img src="image/workflow.png" alt="Music AI Agent Architecture Workflow" class="workflow-image">
+                </div>
             </section>
 
             <section class="example">
@@ -384,10 +405,10 @@
                             prompt: "Create a rock drum beat with a strong kick pattern",
                             answer: "I'll create a driving rock drum pattern with emphasis on the kick and snare. This will provide a solid foundation for your rock song.",
                             audioResults: [
-                                { label: "Drum 1", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
-                                { label: "Drum 2", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
-                                { label: "Drum 3", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
-                                { label: "Drum 4", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" }
+                                { label: "Drum 1", generated: "audio/mixed_1.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Drum 2", generated: "audio/mixed_2.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Drum 3", generated: "audio/mixed_3.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Drum 4", generated: "audio/mixed_4.mp3", reference: "audio/placeholder.mp3" }
                             ],
                             selectedOutput: { audio: "audio/placeholder.mp3", name: "[Drum 1]" }
                         },
