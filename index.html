@@ -11,20 +11,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* 색상 변수 */
-            --color-text-primary: #111827;
-            --color-text-secondary: #6b7280;
-            --color-border: #e5e7eb;
-            --color-background-page: #f9fafb;
+            /* 색상 변수 - 더 모던하고 세련된 색상 팔레트 */
+            --color-text-primary: #1a202c;
+            --color-text-secondary: #4a5568;
+            --color-text-accent: #2b6cb0;
+            --color-border: #e2e8f0;
+            --color-border-light: #f1f5f9;
+            --color-background-page: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
             --color-background-card: #ffffff;
+            --color-background-card-hover: #f8fafc;
+            --color-accent-primary: #3182ce;
+            --color-accent-secondary: #2b6cb0;
+            --color-shadow-light: rgba(0, 0, 0, 0.04);
+            --color-shadow-medium: rgba(0, 0, 0, 0.1);
+            --color-shadow-strong: rgba(0, 0, 0, 0.15);
         }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.7;
+            line-height: 1.75;
             margin: 0;
-            background-color: var(--color-background-page);
+            background: var(--color-background-page);
             color: var(--color-text-primary);
+            font-size: 16px;
+            font-weight: 400;
+            min-height: 100vh;
         }
 
         .container {
@@ -39,11 +50,16 @@
         }
 
         header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
+            font-size: 2.75rem;
+            font-weight: 800;
             text-align: center;
-            letter-spacing: -1px;
-            margin-bottom: 0.75rem;
+            letter-spacing: -1.5px;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--color-text-primary) 0%, var(--color-accent-primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
         }
 
         .authors,
@@ -51,56 +67,97 @@
             text-align: center;
             color: var(--color-text-secondary);
             margin-bottom: 1rem;
-            line-height: 1.5;
+            line-height: 1.6;
+        }
+
+        .authors {
+            font-size: 1.1rem;
+            font-weight: 500;
         }
 
         .affiliations {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            font-weight: 400;
         }
 
         .abstract {
-            background-color: var(--color-background-card);
-            padding: 2rem;
-            border-radius: 16px;
-            border: 1px solid var(--color-border);
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            background: var(--color-background-card);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid var(--color-border-light);
+            box-shadow: 0 8px 24px var(--color-shadow-light), 0 4px 12px var(--color-shadow-medium);
+            position: relative;
         }
 
         .abstract h2 {
-            font-size: 1.25rem;
+            font-size: 1.35rem;
+            font-weight: 700;
             margin-top: 0;
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
+            color: var(--color-accent-secondary);
+        }
+
+        .abstract p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--color-text-primary);
         }
 
         /* --- 예제 섹션 --- */
         .example>h3 {
-            font-size: 1.75rem;
-            font-weight: 600;
-            padding-bottom: 1rem;
-            margin-bottom: 2.5rem;
-            border-bottom: 1px solid var(--color-border);
+            font-size: 2rem;
+            font-weight: 700;
+            padding-bottom: 1.25rem;
+            margin-bottom: 3rem;
+            border-bottom: 2px solid var(--color-accent-primary);
+            color: var(--color-text-primary);
+            position: relative;
+        }
+
+        .example>h3::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--color-accent-primary), var(--color-accent-secondary));
+            border-radius: 1px;
         }
 
         /* --- 스텝 레이아웃 --- */
         .step {
-            background-color: var(--color-background-card);
-            border-radius: 16px;
-            border: 1px solid var(--color-border);
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            padding: 2.5rem;
-            margin-bottom: 2.5rem;
+            background: var(--color-background-card);
+            border-radius: 20px;
+            border: 1px solid var(--color-border-light);
+            box-shadow: 0 6px 20px var(--color-shadow-light), 0 3px 10px var(--color-shadow-medium);
+            padding: 3rem;
+            margin-bottom: 3rem;
         }
 
         .step-header {
-            padding-bottom: 1.25rem;
-            border-bottom: 1px solid var(--color-border);
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--color-border);
+            position: relative;
+        }
+
+        .step-header::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--color-accent-primary);
+            border-radius: 1px;
         }
 
         .step-header h4 {
-            font-size: 1.5rem;
-            font-weight: 600;
+            font-size: 1.6rem;
+            font-weight: 700;
             margin: 0;
             letter-spacing: -0.5px;
+            color: var(--color-accent-secondary);
         }
 
         .step-content {
@@ -109,12 +166,14 @@
         }
 
         .left-column {
-            border-right: 1px solid var(--color-border);
+            border-right: 2px solid var(--color-border);
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
         }
 
         .left-column>div.label-wrapper {
-            padding: 1rem 1.5rem;
-            font-weight: 500;
+            padding: 1.25rem 1.5rem;
+            font-weight: 600;
+            font-size: 0.95rem;
             color: var(--color-text-secondary);
             display: flex;
             align-items: center;
@@ -124,7 +183,7 @@
 
         /* 오른쪽 컬럼 콘텐츠 */
         .right-column>div.content-wrapper {
-            padding: 1rem 0 1rem 2.5rem;
+            padding: 1.25rem 0 1.25rem 3rem;
             border-bottom: 1px solid var(--color-border);
             display: flex;
             align-items: center;
@@ -140,6 +199,9 @@
 
         .right-column p {
             margin: 0;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--color-text-primary);
         }
 
         /* --- 오디오 섹션 --- */
@@ -151,21 +213,35 @@
         }
 
         .audio-section .header {
-            font-weight: 500;
-            font-size: 0.9rem;
-            color: var(--color-text-secondary);
-            text-align: left;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--color-accent-secondary);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .audio-section .label {
-            font-weight: 500;
-            font-size: 0.95rem;
+            font-weight: 600;
+            font-size: 1rem;
             text-align: left;
+            color: var(--color-text-primary);
         }
 
         audio {
             width: 100%;
-            height: 40px;
+            height: 44px;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .audio-name {
+            font-size: 0.8rem;
+            color: var(--color-text-secondary);
+            text-align: center;
+            margin-top: 0.5rem;
+            font-weight: 500;
+            letter-spacing: 0.2px;
         }
 
         /* Mixed audio 섹션 스타일 수정 */
@@ -176,11 +252,12 @@
 
         .mixed-audio-header {
             text-align: center;
-            margin-bottom: 0.75rem;
-            /* 스타일 통일 */
-            font-weight: 500;
-            font-size: 0.9rem;
-            color: var(--color-text-secondary);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--color-accent-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         /* 여백 조정을 위한 헬퍼 클래스 */
@@ -190,6 +267,73 @@
 
         .pb-tight {
             padding-bottom: 0.75rem !important;
+        }
+
+        /* --- 탭 네비게이션 스타일 --- */
+        .example-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--color-border);
+            padding-bottom: 0;
+        }
+
+        .tab-button {
+            background: none;
+            border: none;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-text-secondary);
+            cursor: pointer;
+            border-radius: 8px 8px 0 0;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .tab-button.active {
+            color: var(--color-accent-primary);
+            background: var(--color-background-card);
+        }
+
+        .tab-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--color-accent-primary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* 새로운 섹션 오디오 스타일 */
+        .section-audio-list {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .section-audio-row {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .section-audio-row .label {
+            font-weight: 600;
+            color: var(--color-text-primary);
+        }
+
+        .audio-player-wrapper {
+            width: 100%;
         }
     </style>
 </head>
@@ -214,61 +358,307 @@
             <section class="example">
                 <h3>Examples</h3>
 
-                <div class="step">
-                    <div class="step-header">
-                        <h4>Step 1</h4>
-                    </div>
-
-                    <div class="step-content">
-                        <div class="left-column">
-                            <div class="label-wrapper">User Prompt</div>
-                            <div class="label-wrapper">Answer</div>
-                            <div class="label-wrapper">Audio Results</div>
-                            <div class="label-wrapper">Selected Output</div>
-                        </div>
-                        <div class="right-column">
-                            <div class="content-wrapper">
-                                <p>PromptPromptPromptPromptPrompt</p>
-                            </div>
-                            <div class="content-wrapper">
-                                <p>AnswerAnswerAnswerAnswerAnswer<br>AnswerAnswerAnswerAnswerAnswer</p>
-                            </div>
-                            <div class="content-wrapper pb-tight">
-                                <div class="audio-section">
-                                    <div></div>
-                                    <div class="header">Generated audio</div>
-                                    <div class="header">Reference Audio</div>
-
-                                    <div class="label">Drum 1</div>
-                                    <audio controls src="audio/placeholder.mp3"></audio>
-                                    <audio controls src="audio/placeholder.mp3"></audio>
-
-                                    <div class="label">Drum 2</div>
-                                    <audio controls src="audio/placeholder.mp3"></audio>
-                                    <audio controls src="audio/placeholder.mp3"></audio>
-
-                                    <div class="label">Drum 3</div>
-                                    <audio controls src="audio/placeholder.mp3"></audio>
-                                    <audio controls src="audio/placeholder.mp3"></audio>
-
-                                    <div class="label">Drum 4</div>
-                                    <audio controls src="audio/placeholder.mp3"></audio>
-                                    <audio controls src="audio/placeholder.mp3"></audio>
-                                </div>
-                            </div>
-                            <div class="content-wrapper pt-tight pb-tight">
-                                <div class="mixed-audio-section">
-                                    <div class="mixed-audio-header">Mixed audio</div>
-                                    <audio controls src="audio/placeholder.mp3"></audio>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- 탭 네비게이션 -->
+                <div class="example-tabs">
+                    <button class="tab-button active" onclick="showExample(0)">Example 1</button>
+                    <button class="tab-button" onclick="showExample(1)">Example 2</button>
+                    <button class="tab-button" onclick="showExample(2)">Example 3</button>
+                    <button class="tab-button" onclick="showExample(3)">Example 4</button>
+                    <button class="tab-button" onclick="showExample(4)">Example 5</button>
                 </div>
+
+                <!-- 동적으로 렌더링될 콘텐츠 영역 -->
+                <div id="example-content"></div>
             </section>
         </main>
 
         <script>
+            // 예시 데이터 구조
+            const exampleData = [
+                {
+                    title: "Rock Song Creation",
+                    description: "Creating a rock song with drums, guitar, and vocals",
+                    steps: [
+                        {
+                            stepNumber: 1,
+                            prompt: "Create a rock drum beat with a strong kick pattern",
+                            answer: "I'll create a driving rock drum pattern with emphasis on the kick and snare. This will provide a solid foundation for your rock song.",
+                            audioResults: [
+                                { label: "Drum 1", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Drum 2", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Drum 3", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Drum 4", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" }
+                            ],
+                            selectedOutput: { audio: "audio/placeholder.mp3", name: "[Drum 1]" }
+                        },
+                        {
+                            stepNumber: 2,
+                            prompt: "Add a power chord guitar riff that complements the drums",
+                            answer: "Perfect! I'll add a classic rock guitar riff using power chords that locks in with your drum pattern.",
+                            audioResults: [
+                                { label: "Guitar 1", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Guitar 2", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Guitar 3", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Guitar 4", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" }
+                            ],
+                            selectedOutput: { audio: "audio/placeholder.mp3", name: "[Drum 1, Guitar 2]" }
+                        },
+                        {
+                            stepNumber: 3,
+                            prompt: "Layer in a bass line that follows the root notes",
+                            answer: "Great choice! I'll create a bass line that follows the chord progression and adds low-end punch to complement both drums and guitar.",
+                            audioResults: [
+                                { label: "Bass 1", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Bass 2", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Bass 3", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Bass 4", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" }
+                            ],
+                            selectedOutput: { audio: "audio/placeholder.mp3", name: "[Drum 1, Guitar 2, Bass 3]" }
+                        },
+                        {
+                            stepNumber: 4,
+                            prompt: "Add lead guitar melody for the chorus section",
+                            answer: "Excellent! I'll create a soaring lead guitar melody that will make your chorus really stand out and give it that epic rock feel.",
+                            audioResults: [
+                                { label: "Lead 1", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Lead 2", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Lead 3", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Lead 4", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" }
+                            ],
+                            selectedOutput: { audio: "audio/placeholder.mp3", name: "[Drum 1, Guitar 2, Bass 3, Lead 4]" }
+                        }
+                    ],
+                    finalOutput: {
+                        sections: [
+                            { label: "Intro", audio: "audio/placeholder.mp3" },
+                            { label: "Verse", audio: "audio/placeholder.mp3" },
+                            { label: "Chorus", audio: "audio/placeholder.mp3" },
+                            { label: "Outro", audio: "audio/placeholder.mp3" }
+                        ]
+                    }
+                },
+                {
+                    title: "Jazz Composition",
+                    description: "Creating a smooth jazz piece with piano, bass, and saxophone",
+                    steps: [
+                        {
+                            stepNumber: 1,
+                            prompt: "Create a jazz piano chord progression in Cmaj7",
+                            answer: "I'll create a sophisticated jazz piano progression using extended chords that will serve as the harmonic foundation.",
+                            audioResults: [
+                                { label: "Piano 1", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Piano 2", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Piano 3", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Piano 4", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" }
+                            ],
+                            selectedOutput: { audio: "audio/placeholder.mp3", name: "[Piano 1]" }
+                        },
+                        {
+                            stepNumber: 2,
+                            prompt: "Add a walking bass line that follows jazz harmony",
+                            answer: "Perfect! I'll create a classic walking bass line that moves smoothly through the chord changes.",
+                            audioResults: [
+                                { label: "Bass 1", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Bass 2", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Bass 3", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Bass 4", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" }
+                            ],
+                            selectedOutput: { audio: "audio/placeholder.mp3", name: "[Piano 1, Bass 2]" }
+                        }
+                    ],
+                    finalOutput: {
+                        sections: [
+                            { label: "Head", audio: "audio/placeholder.mp3" },
+                            { label: "Solo", audio: "audio/placeholder.mp3" },
+                            { label: "Bridge", audio: "audio/placeholder.mp3" },
+                            { label: "Outro", audio: "audio/placeholder.mp3" }
+                        ]
+                    }
+                },
+                {
+                    title: "Electronic Dance",
+                    description: "Building an EDM track with synthesizers and electronic beats",
+                    steps: [
+                        {
+                            stepNumber: 1,
+                            prompt: "Create a four-on-the-floor kick drum pattern",
+                            answer: "I'll create a punchy electronic kick pattern that's perfect for the dancefloor with proper sidechain compression.",
+                            audioResults: [
+                                { label: "Kick 1", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Kick 2", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Kick 3", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Kick 4", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" }
+                            ],
+                            selectedOutput: { audio: "audio/placeholder.mp3", name: "[Kick 1]" }
+                        }
+                    ],
+                    finalOutput: {
+                        sections: [
+                            { label: "Intro", audio: "audio/placeholder.mp3" },
+                            { label: "Build", audio: "audio/placeholder.mp3" },
+                            { label: "Drop", audio: "audio/placeholder.mp3" },
+                            { label: "Breakdown", audio: "audio/placeholder.mp3" }
+                        ]
+                    }
+                },
+                {
+                    title: "Ambient Soundscape",
+                    description: "Creating atmospheric ambient music with synthesizers and field recordings",
+                    steps: [
+                        {
+                            stepNumber: 1,
+                            prompt: "Create a warm synthesizer pad with slow attack",
+                            answer: "I'll design a lush, evolving synthesizer pad that creates a peaceful, atmospheric foundation.",
+                            audioResults: [
+                                { label: "Pad 1", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Pad 2", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Pad 3", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Pad 4", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" }
+                            ],
+                            selectedOutput: { audio: "audio/placeholder.mp3", name: "[Pad 1]" }
+                        }
+                    ],
+                    finalOutput: {
+                        sections: [
+                            { label: "Opening", audio: "audio/placeholder.mp3" },
+                            { label: "Development", audio: "audio/placeholder.mp3" },
+                            { label: "Climax", audio: "audio/placeholder.mp3" },
+                            { label: "Resolution", audio: "audio/placeholder.mp3" }
+                        ]
+                    }
+                },
+                {
+                    title: "Classical Orchestra",
+                    description: "Composing a classical piece with strings, woodwinds, and brass",
+                    steps: [
+                        {
+                            stepNumber: 1,
+                            prompt: "Create a string section melody in D major",
+                            answer: "I'll compose a beautiful string melody that captures the elegance and emotion of classical music.",
+                            audioResults: [
+                                { label: "Strings 1", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Strings 2", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Strings 3", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
+                                { label: "Strings 4", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" }
+                            ],
+                            selectedOutput: { audio: "audio/placeholder.mp3", name: "[Strings 1]" }
+                        }
+                    ],
+                    finalOutput: {
+                        sections: [
+                            { label: "Exposition", audio: "audio/placeholder.mp3" },
+                            { label: "Development", audio: "audio/placeholder.mp3" },
+                            { label: "Recapitulation", audio: "audio/placeholder.mp3" },
+                            { label: "Coda", audio: "audio/placeholder.mp3" }
+                        ]
+                    }
+                }
+            ];
+
+            let currentExample = 0;
+
+            function showExample(index) {
+                currentExample = index;
+                
+                // 탭 버튼 활성화 상태 업데이트
+                document.querySelectorAll('.tab-button').forEach((button, i) => {
+                    button.classList.toggle('active', i === index);
+                });
+
+                // 콘텐츠 렌더링
+                renderExample(exampleData[index]);
+            }
+
+            function renderExample(example) {
+                const container = document.getElementById('example-content');
+                
+                let html = '';
+                
+                // 각 스텝 렌더링
+                example.steps.forEach(step => {
+                    html += `
+                        <div class="step">
+                            <div class="step-header">
+                                <h4>Step ${step.stepNumber}</h4>
+                            </div>
+                            <div class="step-content">
+                                <div class="left-column">
+                                    <div class="label-wrapper">User Prompt</div>
+                                    <div class="label-wrapper">Answer</div>
+                                    <div class="label-wrapper">Audio Results</div>
+                                    <div class="label-wrapper">Selected Output</div>
+                                </div>
+                                <div class="right-column">
+                                    <div class="content-wrapper">
+                                        <p>${step.prompt}</p>
+                                    </div>
+                                    <div class="content-wrapper">
+                                        <p>${step.answer}</p>
+                                    </div>
+                                    <div class="content-wrapper pb-tight">
+                                        <div class="audio-section">
+                                            <div></div>
+                                            <div class="header">Generated audio</div>
+                                            <div class="header">Reference Audio</div>
+                                            ${step.audioResults.map(audio => `
+                                                <div class="label">${audio.label}</div>
+                                                <audio controls src="${audio.generated}"></audio>
+                                                <audio controls src="${audio.reference}"></audio>
+                                            `).join('')}
+                                        </div>
+                                    </div>
+                                    <div class="content-wrapper pt-tight pb-tight">
+                                        <div class="mixed-audio-section">
+                                            <div class="mixed-audio-header">Mixed audio</div>
+                                            <audio controls src="${step.selectedOutput.audio}"></audio>
+                                            <div class="audio-name">${step.selectedOutput.name}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                // 최종 출력 섹션 (Section-level)
+                if (example.finalOutput) {
+                    html += `
+                        <div class="step">
+                            <div class="step-header">
+                                <h4>Step ${example.steps.length + 1}~</h4>
+                            </div>
+                            <div class="step-content">
+                                <div class="left-column">
+                                    <div class="label-wrapper">Selected output (section-level)</div>
+                                </div>
+                                <div class="right-column">
+                                    <div class="content-wrapper">
+                                        <div>
+                                            <div class="mixed-audio-header">MIXED AUDIO</div>
+                                            <div class="section-audio-list">
+                                                ${example.finalOutput.sections.map(section => `
+                                                    <div class="section-audio-row">
+                                                        <div class="label">${section.label}</div>
+                                                        <div class="audio-player-wrapper">
+                                                            <audio controls src="${section.audio}"></audio>
+                                                        </div>
+                                                    </div>
+                                                `).join('')}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                container.innerHTML = html;
+                
+                // 행 높이 재조정
+                setTimeout(alignRows, 100);
+            }
+
             function alignRows() {
                 const steps = document.querySelectorAll('.step');
 
@@ -290,7 +680,11 @@
                     }
                 });
             }
-            window.addEventListener('load', alignRows);
+
+            // 페이지 로드 시 첫 번째 예시 표시
+            window.addEventListener('load', () => {
+                showExample(0);
+            });
             window.addEventListener('resize', alignRows);
         </script>
     </div>
