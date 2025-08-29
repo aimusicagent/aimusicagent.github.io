@@ -397,8 +397,8 @@
             // 예시 데이터 구조
             const exampleData = [
                 {
-                    title: "Rock Song Creation",
-                    description: "Creating a rock song with drums, guitar, and vocals",
+                    title: "Afrobeat Song Creation",
+                    description: "Creating a afrobeat song with electronic sounds",
                     steps: [
                         {
                             stepNumber: 1,
@@ -477,40 +477,70 @@
                     }
                 },
                 {
-                    title: "Jazz Composition",
-                    description: "Creating a smooth jazz piece with piano, bass, and saxophone",
+                    title: "Rock Song Creation",
+                    description: "Creating a rock song",
                     steps: [
                         {
                             stepNumber: 1,
-                            prompt: "Create a jazz piano chord progression in Cmaj7",
-                            answer: "I'll create a sophisticated jazz piano progression using extended chords that will serve as the harmonic foundation.",
+                            prompt: "I want to make exciting rock music.",
+                            answer: "Okay, since you said you wanted to make some exciting rock music, I've prepared two drum tracks that will capture that feeling! \n\nRight now, I'm working on the pre-chorus section, so I've focused on a rhythm that will really set the mood of the song.\n\nThe first option is a track with a smooth, textured drum loop and brightly lit cymbals. It's laid-back overall, but it still has a natural groove, so it adds a gentle energy to the song.\nThe second is a drum track with a fast tempo, powerful kicks, and a sharp snare drum. The hi-hats and fills in between will definitely make the song exciting and dynamic.\n\nSince the song doesn't have any other instruments yet, I think the second option will suit you better, as it really adds energy to the pre-chorus! Which direction appeals to you more, or should we try a new idea?",
                             audioResults: [
-                                { label: "Piano 1", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
-                                { label: "Piano 2", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
-                                { label: "Piano 3", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
-                                { label: "Piano 4", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" }
+                                { label: "Drums 1", generated: "audio/rock/1-main/not_selected/a4dbd952-d7ef-4ce3-8f9a-ffac365a8c86-stem-0-rhythm.aac", reference: "audio/rock/1-main/reference/b000234_meet-l-rhythm.aac" },
+                                { label: "Drums 2", generated: "audio/rock/1-main/a4dbd952-d7ef-4ce3-8f9a-ffac365a8c86-stem-1-rhythm.aac", reference: "audio/rock/1-main/reference/b001528_flyaway-m-rhythm.aac" },
                             ],
-                            selectedOutput: { audio: "audio/placeholder.mp3", name: "[Piano 1]" }
+                            selectedOutput: { audio: "audio/placeholder.mp3", name: "[None]" }
                         },
                         {
                             stepNumber: 2,
+                            prompt: "I want to choose the second drum.",
+                            answer: "Okay, you've chosen your second drum rhythm, so here are two energetic rock bass guitar ideas! 🥁\n\nThe first option features a bright and punchy bass that creates a fast and funky groove. The crisp plucks and subtle slides definitely add an exciting vibe to the track.\nThe second option is a warm and driving bass that firmly supports the rhythm while adding stability and power to the song. The bouncy low notes cling to the drums, delivering both energy and weight.\n\nSince the track already has dynamic drums, I think the second option will give it a thicker sound overall and is perfect for capturing the powerful rock mood! 🔥\n\nWhich bass do you prefer? Or maybe you'd like to try something new?",
+                            audioResults: [
+                                { label: "Bass 1", generated: "audio/rock/1-main/not_selected/5d119d97-81be-4cfc-8ff7-2970a438d465-stem-0-low.aac", reference: "audio/rock/1-main/reference/p000397_stupidchallenge-d-low.aac" },
+                                { label: "Bass 2", generated: "audio/rock/1-main/5d119d97-81be-4cfc-8ff7-2970a438d465-stem-1-low.aac", reference: "audio/rock/1-main/reference/p000554_itsagooddaytolive-b-low.aac" },
+                                
+                            ],
+                            selectedOutput: { audio: "audio/rock/1-main/a4dbd952-d7ef-4ce3-8f9a-ffac365a8c86-stem-1-rhythm.aac", name: "[Drums 2]" }
+                        },
+                        {
+                            stepNumber: 3,
+                            prompt: "the second one is better",
+                            answer: "Okay, since you said 'the second one is better,' I've been thinking about it right away! I'm currently working on the pre-chorus (build-up) section, and so far, I've been building a solid rhythm and energy with the drums and bass guitar.\n\nThe first guitar has a sharp, driving crunch tone, with fast strums and dynamic riffs that are characteristic of punk rock, giving the song a strong driving force. It's very bright and aggressive, and the energy is definitely alive!\nThe second guitar features a clear, groovy rhythm strum. The colorful melodic hooks and overdriven chords beautifully complement the solidity of the bass and drums, giving the song a more three-dimensional feel.\n\nThe track already has a strong beat and solid bass, so I think an option like the second guitar that emphasizes melody and harmony will further enhance the dynamics of the song. It seems especially perfect for the anticipation and build-up of the pre-chorus!🔥\n\nShould I go with this, or do you want to try some other guitar ideas? Let me know!",
+                            audioResults: [
+                                { label: "Electric Guitar 1", generated: "audio/rock/1-main/not_selected/582395d8-df55-42c1-8a37-5cc39cbc4594-stem-0-mid.aac", reference: "audio/rock/1-main/reference/p000770_granpateachmehowtodance-b-mid.aac" },
+                                { label: "Electric Guitar 2", generated: "audio/rock/1-main/582395d8-df55-42c1-8a37-5cc39cbc4594-stem-1-mid.aac", reference: "audio/rock/1-main/reference/p000407_take-c-mid.aac" },
+                                
+                            ],
+                            selectedOutput: { audio: "audio/rock/1-main/mixed/drums_bass.mp3", name: "[Drums 2, Bass 2]" }
+                        },
+                        {
+                            stepNumber: 4,
                             prompt: "Add a walking bass line that follows jazz harmony",
                             answer: "Perfect! I'll create a classic walking bass line that moves smoothly through the chord changes.",
                             audioResults: [
-                                { label: "Bass 1", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
-                                { label: "Bass 2", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
-                                { label: "Bass 3", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
-                                { label: "Bass 4", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" }
+                                { label: "Synth 1", generated: "audio/rock/1-main/not_selected/096ff7a2-2185-429a-991c-cf1802cc5735-stem-0-high.aac", reference: "audio/rock/1-main/reference/b001705_summerwaves-i-high.aac" },
+                                { label: "Synth 2", generated: "audio/rock/1-main/096ff7a2-2185-429a-991c-cf1802cc5735-stem-1-high.aac", reference: "audio/rock/1-main/reference/m000185_lost_1-e-high.aac" },
+                                
                             ],
-                            selectedOutput: { audio: "audio/placeholder.mp3", name: "[Piano 1, Bass 2]" }
+                            selectedOutput: { audio: "audio/rock/1-main/mixed/drums_bass_electricGuitar.mp3", name: "[Drums 2, Bass 2, Electric Guitar 2]" }
+                        },
+                        {
+                            stepNumber: 5,
+                            prompt: "Add a walking bass line that follows jazz harmony",
+                            answer: "Perfect! I'll create a classic walking bass line that moves smoothly through the chord changes.",
+                            audioResults: [
+                                { label: "Synth 1", generated: "audio/rock/1-main/not_selected/2d0a8485-4d1c-45f6-94a8-58d038636739-stem-0-high.aac", reference: "audio/rock/1-main/reference/p000570_newsun-d-high.aac" },
+                                { label: "Synth 2", generated: "audio/rock/1-main/not_selected/2d0a8485-4d1c-45f6-94a8-58d038636739-stem-1-high.aac", reference: "audio/rock/1-main/reference/b001502_courage-e-high.aac" },
+                                
+                            ],
+                            selectedOutput: { audio: "audio/rock/1-main/mixed/drums_bass_electricGuitar_synth.mp3", name: "[Drums 2, Bass 2, Electric Guitar 2, Synth 2]" }
                         }
                     ],
                     finalOutput: {
                         sections: [
-                            { label: "Head", audio: "audio/placeholder.mp3" },
-                            { label: "Solo", audio: "audio/placeholder.mp3" },
-                            { label: "Bridge", audio: "audio/placeholder.mp3" },
-                            { label: "Outro", audio: "audio/placeholder.mp3" }
+                            { label: "Intro", audio: "audio/rock/0/mixed_0.mp3" },
+                            { label: "Pre-Chorus / Build-Up", audio: "audio/rock/1-main/mixed/drums_bass_electricGuitar_synth.mp3" },
+                            { label: "Chorus / Drop", audio: "audio/rock/2/mixed_2.mp3" },
+                            { label: "Bridge / Breakdown", audio: "audio/rock/3/mixed_3.mp3" }
                         ]
                     }
                 },
@@ -534,9 +564,9 @@
                     finalOutput: {
                         sections: [
                             { label: "Intro", audio: "audio/placeholder.mp3" },
-                            { label: "Build", audio: "audio/placeholder.mp3" },
-                            { label: "Drop", audio: "audio/placeholder.mp3" },
-                            { label: "Breakdown", audio: "audio/placeholder.mp3" }
+                            { label: "Pre-Chorus / Build-Up", audio: "audio/placeholder.mp3" },
+                            { label: "Chorus / Drop", audio: "audio/placeholder.mp3" },
+                            { label: "Bridge / Breakdown", audio: "audio/placeholder.mp3" }
                         ]
                     }
                 },
