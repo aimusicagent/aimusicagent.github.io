@@ -199,7 +199,7 @@
 
         .right-column p {
             margin: 0;
-            font-size: 1.05rem;
+            font-size: 0.95rem;
             line-height: 1.7;
             color: var(--color-text-primary);
         }
@@ -223,7 +223,7 @@
 
         .audio-section .label {
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.8rem;
             text-align: left;
             color: var(--color-text-primary);
         }
@@ -329,13 +329,14 @@
 
         .section-audio-row .label {
             font-weight: 600;
+            font-size: 0.9rem;
             color: var(--color-text-primary);
+            transform: translateY(-3px);
         }
 
         .audio-player-wrapper {
             width: 100%;
         }
-
         /* --- 워크플로우 이미지 스타일 --- */
         .workflow-container {
             text-align: center;
@@ -366,9 +367,21 @@
         <main>
             <section class="abstract">
                 <h2>Abstract</h2>
-                <p>abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstractabstractabstractabstract
-                    abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract
-                    abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract abstract
+                <p> Generative AI is reshaping music creation, but its rapid growth exposes structural gaps in attribution, 
+                    rights management, and economic models. Unlike past media shifts—from live performance to recordings, downloads, and streaming—AI
+                    transforms the entire lifecycle of music, collapsing boundaries between creation, distribution, and monetization. 
+                    However, existing streaming systems, with opaque and concentrated royalty flows, are ill-equipped to handle the scale and complexity
+                    of AI-driven production. <br>
+                    We propose a content-based Music AI Agent architecture that embeds attribution directly into the creative workflow through block-level retrieval 
+                    and agentic orchestration. Designed for iterative, session-based interaction, 
+                    the system organizes music into granular components (Blocks) stored in BlockDB; 
+                    each use triggers an Attribution Layer event for transparent provenance and real-time settlement.<br>
+                    
+                    This framework reframes AI from a generative tool into infrastructure for a Fair AI
+                    Media Platform. By enabling fine-grained attribution, equitable compensation, and
+                    participatory engagement, it points toward a post-streaming paradigm where music
+                    functions not as a static catalog but as a collaborative and adaptive ecosystem.
+                    Session example demo: https://aimusicagent.github.io/
                 </p>
                 
                 <div class="workflow-container">
@@ -403,7 +416,7 @@
                         {
                             stepNumber: 1,
                             prompt: "Create an Afrobeat song with electronic sounds",
-                            answer: "Okay, since you said you wanted to make Afrobeat music, I prepared two rhythm tracks with that exact feeling! 🥁✨\n\nI'm currently working on the verse section, so I approached it with a focus on percussion that would fit that mood.\n\nThe first option is a very energetic rhythm with congas, bongos, and djembe layered with hi-hats, snares, and kicks. The shakers and tambourines are naturally placed on top, creating an energetic yet smooth groove overall.\nThe second option is a warm and organic rhythm with a combination of kicks, snares, rims, hi-hats, bongos, and congas. The kick firmly holds the groove, and the overall vibe is more natural and refreshing.\n\nSince the song is still in its infancy, I think the first option, which has a lot of energy, will suit the verse better! I think starting like this will immediately convey the liveliness that is characteristic of Afrobeat. What do you think?\n\nWhich rhythm do you like better, the first or the second, or should I try something completely different? Let me know what you think!",
+                            answer: "Okay, since you said you wanted to make Afrobeat music, I prepared two rhythm tracks with that exact feeling! 🥁✨<br>I'm currently working on the verse section, so I approached it with a focus on percussion that would fit that mood.<br>The first option is a very energetic rhythm with congas, bongos, and djembe layered with hi-hats, snares, and kicks. The shakers and tambourines are naturally placed on top, creating an energetic yet smooth groove overall.<br>The second option is a warm and organic rhythm with a combination of kicks, snares, rims, hi-hats, bongos, and congas. The kick firmly holds the groove, and the overall vibe is more natural and refreshing.<br>Since the song is still in its infancy, I think the first option, which has a lot of energy, will suit the verse better! I think starting like this will immediately convey the liveliness that is characteristic of Afrobeat. What do you think?<br>Which rhythm do you like better, the first or the second, or should I try something completely different? Let me know what you think!",
                             audioResults: [
                                 { label: "Percussion 1", generated: "audio/afrobeat/1-main/not_selected/6fed927d-5b6f-4425-bb71-e3cff9ceed9a-stem-0-rhythm.aac", reference: "audio/afrobeat/1-main/reference/b000767_quaking-c-rhythm.aac" },
                                 { label: "Percussion 2", generated: "audio/afrobeat/1-main/6fed927d-5b6f-4425-bb71-e3cff9ceed9a-stem-1-rhythm.aac", reference: "audio/afrobeat/1-main/reference/b003354_againandagain-a-rhythm.aac" },
@@ -413,7 +426,7 @@
                         {
                             stepNumber: 2,
                             prompt: "I want to select the second suggested rhythm/percussion stem",
-                            answer: "Okay, you just said you liked the second one, so I've been thinking about it! 🥁\n\nI've come up with two basslines that would go well with the rhythm/percussion you chose this time.\n\nThe first is an 808 bass, with a deep, warm low-end that firmly establishes the groove of the track while laying down smoothly. It'll create a rich, immersive atmosphere for the song.\nThe second is a synth bass, with a soft, vibrant tone that mixes traditional Afrobeat with an Afro-Cuban feel. The rhythmic syncopation and melody add to the overall lively, groovy vibe!\n\nSince we only have percussion, I think the second synth bass, which can bring out the overall energy and liveliness, would be a better fit for our current goal. It'll definitely capture the characteristic upbeat and soulfulness of Afrobeat!\n\nWhich bassline do you prefer, or should we try something new? Let me know what you think.",
+                            answer: "Okay, you just said you liked the second one, so I've been thinking about it! 🥁<br>I've come up with two basslines that would go well with the rhythm/percussion you chose this time.<br>The first is an 808 bass, with a deep, warm low-end that firmly establishes the groove of the track while laying down smoothly. It'll create a rich, immersive atmosphere for the song.<br>The second is a synth bass, with a soft, vibrant tone that mixes traditional Afrobeat with an Afro-Cuban feel. The rhythmic syncopation and melody add to the overall lively, groovy vibe!<br>Since we only have percussion, I think the second synth bass, which can bring out the overall energy and liveliness, would be a better fit for our current goal. It'll definitely capture the characteristic upbeat and soulfulness of Afrobeat!<br>Which bassline do you prefer, or should we try something new? Let me know what you think.",
                             audioResults: [
                                 { label: "Bass 1", generated: "audio/afrobeat/1-main/679fcbf6-6571-4781-bb20-be11c56d487f-stem-0-low.aac", reference: "audio/afrobeat/1-main/reference/b004472_faces-i-low.aac" },
                                 { label: "Bass 2", generated: "audio/afrobeat/1-main/not_selected/679fcbf6-6571-4781-bb20-be11c56d487f-stem-1-low.aac", reference: "audio/afrobeat/1-main/reference/b004045_ambientebp-d-low.aac" },
@@ -424,7 +437,7 @@
                         {
                             stepNumber: 3,
                             prompt: "I want to use the first suggested bass",
-                            answer: "Okay, since you chose the first bass, I've prepared some guitar riff ideas right away! 🎸\n\nThe first guitar option is a neo-soul style with warm and soft strumming. Bright-toned strums surround the rhythm, while the leisurely melody line adds a warm feeling to the song.\n\nThe second option is a cheerful and funky guitar riff that is characteristic of Afrobeat. The fast, clear strumming and clever single notes combine to bring the track to life.\n\nOur track has a nice groove so far with the percussion and 808 bass, so I think the second, more rhythmic guitar would really liven up the overall vibe. What do you think?\n\nYou can choose whichever you like better between the first and second options, or you can suggest a new direction!",
+                            answer: "Okay, since you chose the first bass, I've prepared some guitar riff ideas right away! 🎸<br>The first guitar option is a neo-soul style with warm and soft strumming. Bright-toned strums surround the rhythm, while the leisurely melody line adds a warm feeling to the song.<br>The second option is a cheerful and funky guitar riff that is characteristic of Afrobeat. The fast, clear strumming and clever single notes combine to bring the track to life.<br>Our track has a nice groove so far with the percussion and 808 bass, so I think the second, more rhythmic guitar would really liven up the overall vibe. What do you think?<br>You can choose whichever you like better between the first and second options, or you can suggest a new direction!",
                             audioResults: [
                                 { label: "Guitar 1", generated: "audio/afrobeat/1-main/not_selected/2a10abcf-aec8-431f-a6df-c51c997da288-stem-0-mid.aac", reference: "audio/afrobeat/1-main/reference/b004317_soultrain-k-mid.aac" },
                                 { label: "Guitar 2", generated: "audio/afrobeat/1-main/not_selected/2a10abcf-aec8-431f-a6df-c51c997da288-stem-1-mid.aac", reference: "audio/afrobeat/1-main/reference/b004784_mindful-i-mid.aac" },
@@ -435,7 +448,7 @@
                         {
                             stepNumber: 4,
                             prompt: "Hmm.. I want to add EDM-style sound to the current Afrobeat-based mix",
-                            answer: "Okay, since you said you wanted an EDM-style sound, I prepared two different synth layers! \n\nThe first option has the crisp, bright tones of the pluck synth that cut through the rhythm tightly, creating an energetic atmosphere. This is combined with the mallet marimba and ethereal synth vocals, creating a groovy Afrobeat that also has a dreamy feel.\n\nThe second option has the pad synth enveloping the entire song with warm, lush textures, while the lead synth adds a bright, striking melody. The arpeggiator synth provides a sparkling rhythm and gives the track a modern dance vibe.\n\nOur track is currently anchored by organic percussion and 808 bass, so I think the first pluck synth option adds liveliness to the rhythm and captures the unique energy of EDM the best! What do you think?\n\nPlease choose whichever you prefer, or let me know if you have any new ideas!",
+                            answer: "Okay, since you said you wanted an EDM-style sound, I prepared two different synth layers! <br>The first option has the crisp, bright tones of the pluck synth that cut through the rhythm tightly, creating an energetic atmosphere. This is combined with the mallet marimba and ethereal synth vocals, creating a groovy Afrobeat that also has a dreamy feel.<br>The second option has the pad synth enveloping the entire song with warm, lush textures, while the lead synth adds a bright, striking melody. The arpeggiator synth provides a sparkling rhythm and gives the track a modern dance vibe.<br>Our track is currently anchored by organic percussion and 808 bass, so I think the first pluck synth option adds liveliness to the rhythm and captures the unique energy of EDM the best! What do you think?<br>Please choose whichever you prefer, or let me know if you have any new ideas!",
                             audioResults: [
                                 { label: "Lead 1", generated: "audio/afrobeat/1-main/not_selected/3ea9c1b2-b95d-4d7a-93ee-e98ac7307a28-stem-0-mid.aac", reference: "audio/afrobeat/1-main/reference/m000380_shadow_3-c-mid.aac" },
                                 { label: "Lead 2", generated: "audio/afrobeat/1-main/3ea9c1b2-b95d-4d7a-93ee-e98ac7307a28-stem-1-mid.aac", reference: "audio/afrobeat/1-main/reference/b004705_family-b-mid.aac" },
@@ -446,7 +459,7 @@
                         {
                             stepNumber: 5,
                             prompt: "I like 2nd synth stem, and please add a strong EDM sound in the high frequency range",
-                            answer: "Yes, I tried to capture that feeling! I'm currently working on the verse section, and I've prepared two high parts that will go well with it.\n\nThe first one creates a dreamy and airy layer of synth vocals. The warm and energetic lead synth melody is mixed with lush strings, adding a future bass feel to the Afrobeat-based groove.\n\nThe second one adds natural warmth with bright and clear strokes of acoustic guitar. The airy texture of the synth vocals is layered over this, creating an overall warm and modern EDM mood.\n\nThe track already has rhythmic percussion, deep 808 bass, lush synths, and dreamy high synth vocals, so I think the first option fits best, adding the characteristic EDM energy and dreamy atmosphere! 🕺✨\n\nWhich option do you like better? Or maybe you'd like to try something different?",
+                            answer: "Yes, I tried to capture that feeling! I'm currently working on the verse section, and I've prepared two high parts that will go well with it.<br>The first one creates a dreamy and airy layer of synth vocals. The warm and energetic lead synth melody is mixed with lush strings, adding a future bass feel to the Afrobeat-based groove.<br>The second one adds natural warmth with bright and clear strokes of acoustic guitar. The airy texture of the synth vocals is layered over this, creating an overall warm and modern EDM mood.<br>The track already has rhythmic percussion, deep 808 bass, lush synths, and dreamy high synth vocals, so I think the first option fits best, adding the characteristic EDM energy and dreamy atmosphere! 🕺✨<br>Which option do you like better? Or maybe you'd like to try something different?",
                             audioResults: [
                                 { label: "SYNTH 1", generated: "audio/afrobeat/1-main/not_selected/f45656c4-9b1b-4793-aaf8-0b757cfc1a08-stem-0-high.aac", reference: "audio/afrobeat/1-main/reference/b002192_loveless-b-high.aac" },
                                 { label: "SYNTH 2", generated: "audio/afrobeat/1-main/f45656c4-9b1b-4793-aaf8-0b757cfc1a08-stem-1-high.aac", reference: "audio/afrobeat/1-main/reference/p000372_ontherock-a-high.aac" },
@@ -457,7 +470,7 @@
                         {
                             stepNumber: 6,
                             prompt: "Good, let's use the second stem. After that, I want to create a new section.",
-                            answer: "Okay, you chose the second synth option! This synth adds a natural emotional feel to the song with its bright, warm strums. It feels like it organically brings life to the track when paired with the electronic elements.\n\nWith the harmonious mix of synths, bass, percussion, and synth vocals already in the song, I think this guitar will enrich the overall sound. It's the perfect choice to capture the vibrant vibe of Afrobeat and EDM that we're aiming for!\n\nIf you have any other ideas, please let me know. Or should we just create the next section?",
+                            answer: "Okay, you chose the second synth option! This synth adds a natural emotional feel to the song with its bright, warm strums. It feels like it organically brings life to the track when paired with the electronic elements.<br>With the harmonious mix of synths, bass, percussion, and synth vocals already in the song, I think this guitar will enrich the overall sound. It's the perfect choice to capture the vibrant vibe of Afrobeat and EDM that we're aiming for!<br>If you have any other ideas, please let me know. Or should we just create the next section?",
                             audioResults: [
                                 { label: "SYNTH 1", generated: "audio/afrobeat/1-main/not_selected/f45656c4-9b1b-4793-aaf8-0b757cfc1a08-stem-0-high.aac", reference: "audio/afrobeat/1-main/reference/b003700_tellit-j-high.aac" },
                                 { label: "SYNTH 2", generated: "audio/afrobeat/1-main/f45656c4-9b1b-4793-aaf8-0b757cfc1a08-stem-1-high.aac", reference: "audio/afrobeat/1-main/reference/b006201_ridewithme-h-high.aac" },
@@ -483,7 +496,7 @@
                         {
                             stepNumber: 1,
                             prompt: "I want to make exciting rock music.",
-                            answer: "Okay, since you said you wanted to make some exciting rock music, I've prepared two drum tracks that will capture that feeling! \n\nRight now, I'm working on the pre-chorus section, so I've focused on a rhythm that will really set the mood of the song.\n\nThe first option is a track with a smooth, textured drum loop and brightly lit cymbals. It's laid-back overall, but it still has a natural groove, so it adds a gentle energy to the song.\nThe second is a drum track with a fast tempo, powerful kicks, and a sharp snare drum. The hi-hats and fills in between will definitely make the song exciting and dynamic.\n\nSince the song doesn't have any other instruments yet, I think the second option will suit you better, as it really adds energy to the pre-chorus! Which direction appeals to you more, or should we try a new idea?",
+                            answer: "Okay, since you said you wanted to make some exciting rock music, I've prepared two drum tracks that will capture that feeling! <br>Right now, I'm working on the pre-chorus section, so I've focused on a rhythm that will really set the mood of the song.<br>The first option is a track with a smooth, textured drum loop and brightly lit cymbals. It's laid-back overall, but it still has a natural groove, so it adds a gentle energy to the song.<br>The second is a drum track with a fast tempo, powerful kicks, and a sharp snare drum. The hi-hats and fills in between will definitely make the song exciting and dynamic.<br>Since the song doesn't have any other instruments yet, I think the second option will suit you better, as it really adds energy to the pre-chorus! Which direction appeals to you more, or should we try a new idea?",
                             audioResults: [
                                 { label: "Drums 1", generated: "audio/rock/1-main/not_selected/a4dbd952-d7ef-4ce3-8f9a-ffac365a8c86-stem-0-rhythm.aac", reference: "audio/rock/1-main/reference/b000234_meet-l-rhythm.aac" },
                                 { label: "Drums 2", generated: "audio/rock/1-main/a4dbd952-d7ef-4ce3-8f9a-ffac365a8c86-stem-1-rhythm.aac", reference: "audio/rock/1-main/reference/b001528_flyaway-m-rhythm.aac" },
@@ -493,7 +506,7 @@
                         {
                             stepNumber: 2,
                             prompt: "I want to choose the second drum.",
-                            answer: "Okay, you've chosen your second drum rhythm, so here are two energetic rock bass guitar ideas! 🥁\n\nThe first option features a bright and punchy bass that creates a fast and funky groove. The crisp plucks and subtle slides definitely add an exciting vibe to the track.\nThe second option is a warm and driving bass that firmly supports the rhythm while adding stability and power to the song. The bouncy low notes cling to the drums, delivering both energy and weight.\n\nSince the track already has dynamic drums, I think the second option will give it a thicker sound overall and is perfect for capturing the powerful rock mood! 🔥\n\nWhich bass do you prefer? Or maybe you'd like to try something new?",
+                            answer: "Okay, you've chosen your second drum rhythm, so here are two energetic rock bass guitar ideas! 🥁<br>The first option features a bright and punchy bass that creates a fast and funky groove. The crisp plucks and subtle slides definitely add an exciting vibe to the track.<br>The second option is a warm and driving bass that firmly supports the rhythm while adding stability and power to the song. The bouncy low notes cling to the drums, delivering both energy and weight.<br>Since the track already has dynamic drums, I think the second option will give it a thicker sound overall and is perfect for capturing the powerful rock mood! 🔥<br>Which bass do you prefer? Or maybe you'd like to try something new?",
                             audioResults: [
                                 { label: "Bass 1", generated: "audio/rock/1-main/not_selected/5d119d97-81be-4cfc-8ff7-2970a438d465-stem-0-low.aac", reference: "audio/rock/1-main/reference/p000397_stupidchallenge-d-low.aac" },
                                 { label: "Bass 2", generated: "audio/rock/1-main/5d119d97-81be-4cfc-8ff7-2970a438d465-stem-1-low.aac", reference: "audio/rock/1-main/reference/p000554_itsagooddaytolive-b-low.aac" },
@@ -504,7 +517,7 @@
                         {
                             stepNumber: 3,
                             prompt: "the second one is better",
-                            answer: "Okay, since you said 'the second one is better,' I've been thinking about it right away! I'm currently working on the pre-chorus (build-up) section, and so far, I've been building a solid rhythm and energy with the drums and bass guitar.\n\nThe first guitar has a sharp, driving crunch tone, with fast strums and dynamic riffs that are characteristic of punk rock, giving the song a strong driving force. It's very bright and aggressive, and the energy is definitely alive!\nThe second guitar features a clear, groovy rhythm strum. The colorful melodic hooks and overdriven chords beautifully complement the solidity of the bass and drums, giving the song a more three-dimensional feel.\n\nThe track already has a strong beat and solid bass, so I think an option like the second guitar that emphasizes melody and harmony will further enhance the dynamics of the song. It seems especially perfect for the anticipation and build-up of the pre-chorus!🔥\n\nShould I go with this, or do you want to try some other guitar ideas? Let me know!",
+                            answer: "Okay, since you said 'the second one is better,' I've been thinking about it right away! I'm currently working on the pre-chorus (build-up) section, and so far, I've been building a solid rhythm and energy with the drums and bass guitar.<br>The first guitar has a sharp, driving crunch tone, with fast strums and dynamic riffs that are characteristic of punk rock, giving the song a strong driving force. It's very bright and aggressive, and the energy is definitely alive!<br>The second guitar features a clear, groovy rhythm strum. The colorful melodic hooks and overdriven chords beautifully complement the solidity of the bass and drums, giving the song a more three-dimensional feel.<br>The track already has a strong beat and solid bass, so I think an option like the second guitar that emphasizes melody and harmony will further enhance the dynamics of the song. It seems especially perfect for the anticipation and build-up of the pre-chorus!🔥<br>Should I go with this, or do you want to try some other guitar ideas? Let me know!",
                             audioResults: [
                                 { label: "Electric Guitar 1", generated: "audio/rock/1-main/not_selected/582395d8-df55-42c1-8a37-5cc39cbc4594-stem-0-mid.aac", reference: "audio/rock/1-main/reference/p000770_granpateachmehowtodance-b-mid.aac" },
                                 { label: "Electric Guitar 2", generated: "audio/rock/1-main/582395d8-df55-42c1-8a37-5cc39cbc4594-stem-1-mid.aac", reference: "audio/rock/1-main/reference/p000407_take-c-mid.aac" },
@@ -724,6 +737,9 @@
 
                 container.innerHTML = html;
                 
+                // 새로 생성된 오디오 요소들에 이벤트 리스너 설정
+                setupAudioControls();
+                
                 // 행 높이 재조정
                 setTimeout(alignRows, 100);
             }
@@ -750,9 +766,30 @@
                 });
             }
 
+            // 오디오 재생 관리
+            let currentlyPlayingAudio = null;
+
+            function stopAllOtherAudio(currentAudio) {
+                if (currentlyPlayingAudio && currentlyPlayingAudio !== currentAudio) {
+                    currentlyPlayingAudio.pause();
+                    currentlyPlayingAudio.currentTime = 0;
+                }
+                currentlyPlayingAudio = currentAudio;
+            }
+
+            function setupAudioControls() {
+                const allAudioElements = document.querySelectorAll('audio');
+                allAudioElements.forEach(audio => {
+                    audio.addEventListener('play', () => {
+                        stopAllOtherAudio(audio);
+                    });
+                });
+            }
+
             // 페이지 로드 시 첫 번째 예시 표시
             window.addEventListener('load', () => {
                 showExample(0);
+                setupAudioControls();
             });
             window.addEventListener('resize', alignRows);
         </script>
