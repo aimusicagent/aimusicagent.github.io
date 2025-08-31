@@ -633,60 +633,76 @@
                     }
                 },
                 {
-                    title: "Ambient Soundscape",
-                    description: "Creating atmospheric ambient music with synthesizers and field recordings",
+                    title: "Funky Jazz",
+                    description: "Funky Jazz",
                     steps: [
                         {
                             stepNumber: 1,
-                            prompt: "Create a warm synthesizer pad with slow attack",
-                            answer: "I'll design a lush, evolving synthesizer pad that creates a peaceful, atmospheric foundation.",
+                            prompt: "I want to make jazz fusion music based on funk rhythms.",
+                            answer: "Okay, you said you wanted to create a jazz fusion track based on a funk rhythm, so I've prepared two drum ideas for that direction! <br><br>I'm currently working on the verse section, so I've been thinking about drum grooves that fit that vibe.<br><br>The first option is a really tight and punchy drum loop. The crispy snare and rounded kick firmly hold the groove, giving it a powerful yet danceable feel overall. <br>The second option is a more dynamic and textured drum track. The sparkling hi-hats, bright cymbals, and rhythmic fills really bring out the liveliness of jazz fusion.<br><br>Since I don't have a lot of instruments yet, I think a track with a solid groove like the first option will anchor the verse well. What do you think?<br><br>You can choose whichever you like, and if you have any new ideas, please feel free to let me know!",
                             audioResults: [
-                                { label: "Pad 1", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
-                                { label: "Pad 2", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
-                                { label: "Pad 3", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
-                                { label: "Pad 4", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" }
+                                { label: "Drums 1", generated: "audio/jazz/1/41e6fb1c-347f-4aa0-8ab4-0a16c168606e-stem-0-rhythm.aac", reference: "audio/jazz/1/reference/m000109_gettome_3-d-rhythm.aac" },
+                                { label: "Drums 2", generated: "audio/jazz/1/not_selected/41e6fb1c-347f-4aa0-8ab4-0a16c168606e-stem-1-rhythm.aac", reference: "audio/jazz/1/reference/b005894_magiclight-a-rhythm.aac" },
+                            
                             ],
-                            selectedOutput: { audio: "audio/placeholder.mp3", name: "[Pad 1]" }
-                        }
+                            selectedOutput: { audio: "audio/placeholder.mp3", name: "[None]" }
+                        },
+                        {
+                            stepNumber: 1,
+                            prompt: "I want to selecte the first suggested rhythm stem.",
+                            answer: "Okay, I'll go with that bass idea right away! 🥁<br><br>The drums are already very tight and groovy, so I made the bass fit that rhythm perfectly. The first bass option has a warm, round tone, mixed with funky slides and pops, which meshes perfectly with the rhythm. It solidifies the groove with the drums, while still maintaining the playful feel that's characteristic of jazz fusion.<br><br>The track already has a strong drum core, so I think this first bass will really solidify the groove and energy. The two instruments will really bring out the best of funk and jazz!<br><br>Should I go with this option right away, or do you have any other ideas you'd like to try? Let me know what you think!",
+                            audioResults: [
+                                { label: "Bass 1", generated: "audio/jazz/1/ac1b342b-62c2-4cd9-b8a7-1b4a01fe21df-stem-0-low.aac", reference: "audio/jazz/1/reference/p000734_summerdance-b-low.aac" },
+                                { label: "Bass 2", generated: "audio/jazz/1/not_selected/ac1b342b-62c2-4cd9-b8a7-1b4a01fe21df-stem-1-low.aac", reference: "audio/jazz/1/reference/p000080_catcatch-j-low.aac" },
+                            
+                            ],
+                            selectedOutput: { audio: "audio/jazz/1/41e6fb1c-347f-4aa0-8ab4-0a16c168606e-stem-0-rhythm.aac", name: "[Drums 1]" }
+                        },
+                        {
+                            stepNumber: 2,
+                            prompt: "I want to choose 1st one.",
+                            answer: "Okay, you just chose the bass guitar in option 1! So I have two medium layer suggestions for you next.<br><br>The first is a mid layer with a soft blend of electric guitar and electric piano. The warm, sweet chords and delicate melody add a romantic and rich color to the track. The second option is centered around pad synths and electric piano, and the soft, spacious texture gives the track a dream-pop vibe and a sense of spaciousness.<br><br>Since the drums and bass are tightly and funky right now, I think the jazz fusion guitar/piano combination in option 1 will complete the harmony of rhythm and melody. What do you think?<br><br>Do you prefer either option, or let me know if you'd like a different direction!",
+                            audioResults: [
+                                { label: "Electric Guitar 1", generated: "audio/jazz/1/48b78d85-9000-491b-95a9-8252e4697490-stem-0-mid.aac", reference: "audio/jazz/1/reference/b006371_stranded-f-mid.aac" },
+                                { label: "Electric Guitar 2", generated: "audio/jazz/1/not_selected/48b78d85-9000-491b-95a9-8252e4697490-stem-1-mid.aac", reference: "audio/jazz/1/reference/b006586_wantedlove-o-mid.aac" },
+                            
+                            ],
+                            selectedOutput: { audio: "audio/jazz/1/rhy_low.mp3", name: "[Drums 1, Bass 1]" }
+                        },
+                        {
+                            stepNumber: 3,
+                            prompt: "Please use option 1 stem",
+                            answer: "Okay, you've chosen your first electric guitar, so let's move on to adding the melody line! 🎸<br><br>For this high part melody, I've prepared two feels:<br><br>The first option is a warm and mellow saxophone melody. Its soft, velvety sound adds depth and emotion to the song, and it blends well with the rhythm section and electric guitar. The dynamic swells and delicate vibrato that appear frequently add a rich atmosphere and energy to the song.<br><br>The second is a gently flowing flute solo, with an airy and clear melody that floats lightly over the groove. It creates a fresher and more peaceful atmosphere than the saxophone, and the brass adds a hint of jazz fusion improvisational charm.<br><br>Since our track already has an emotional vibe with its warm rhythm and soft electric guitar, I think the first saxophone melody will add even more emotion and harmony. I think this choice will further enhance the neo-soul feel of the song. What do you think?<br><br>Which melody do you like, or do you have another idea? Let me know!",
+                            audioResults: [
+                                { label: "Saxophone 1", generated: "audio/jazz/1/2750047f-68dd-4c86-9a2e-581e79c8a6d0-stem-0-high.aac", reference: "audio/jazz/1/reference/b006371_stranded-b-high.aac" },
+                                { label: "Saxophone 2", generated: "audio/jazz/1/not_selected/2750047f-68dd-4c86-9a2e-581e79c8a6d0-stem-1-high.aac", reference: "audio/jazz/1/reference/b004088_comethru-b-high.aac" },
+                            
+                            ],
+                            selectedOutput: { audio: "audio/jazz/1/rhy_low_mid.mp3", name: "[Drums 1, Bass 1, Electric Guitar 1]" }
+                        },
+                        {
+                            stepNumber: 4,
+                            prompt: "I like the 1st one",
+                            answer: "Since you said you liked the first one, I'll implement that choice right away! 🎷<br><br>The first option features a warm and sweet saxophone that soulfully unravels the melody, adding soft and rich colors over the drums, bass, and electric guitar. This melody adds liveliness and a dreamy feeling to the track.<br><br>So far, I think the balance of the track between the drums, bass guitar, electric guitar, and this emotional saxophone is just right, completing the modern yet warm mood of the song. I think this combination really captures the jazz fusion feel with the funk rhythm that we were going for!<br><br>Do you have any sections you'd like to move on to next or ideas you'd like to add? Or should we just create the next section?",
+                            audioResults: [
+                                { label: "Saxophone 1", generated: "audio/jazz/1/not_selected/916089c2-8000-42f1-af3c-b8d0f15f70c7-stem-0-high.aac", reference: "audio/jazz/1/reference/b004275_casablanca-i-high.aac" },
+                                { label: "Electric Guitar 1", generated: "audio/jazz/1/not_selected/916089c2-8000-42f1-af3c-b8d0f15f70c7-stem-1-high.aac", reference: "audio/jazz/1/reference/b001706_sundaymorning-l-high.aac" },
+                            
+                            ],
+                            selectedOutput: { audio: "audio/jazz/1/rhy_low_mid_high.mp3", name: "[Drums 1, Bass 1, Electric Guitar 1, Saxophone 1]" }
+                        },
                     ],
                     finalOutput: {
                         sections: [
-                            { label: "Opening", audio: "audio/placeholder.mp3" },
-                            { label: "Development", audio: "audio/placeholder.mp3" },
-                            { label: "Climax", audio: "audio/placeholder.mp3" },
-                            { label: "Resolution", audio: "audio/placeholder.mp3" }
+                            { label: "Intro", audio: "audio/jazz/0/mixed_0.mp3" },
+                            { label: "Verse", audio: "audio/jazz/1/rhy_low_mid_high.mp3" },
+                            { label: "Chorus / Drop", audio: "audio/jazz/2/mixed_2.mp3" },
+                            { label: "Bridge / Breakdown", audio: "audio/jazz/3/mixed_3.mp3" },
+                            { label: "Outro", audio: "audio/jazz/4/mixed_4.mp3" },
                         ]
                     }
                 },
-                {
-                    title: "Classical Orchestra",
-                    description: "Composing a classical piece with strings, woodwinds, and brass",
-                    steps: [
-                        {
-                            stepNumber: 1,
-                            prompt: "Create a string section melody in D major",
-                            answer: "I'll compose a beautiful string melody that captures the elegance and emotion of classical music.",
-                            audioResults: [
-                                { label: "Strings 1", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
-                                { label: "Strings 2", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
-                                { label: "Strings 3", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
-                                { label: "Strings 4", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" }
-                            ],
-                            selectedOutput: { audio: "audio/placeholder.mp3", name: "[Strings 1]" }
-                        }
-                    ],
-                    finalOutput: {
-                        sections: [
-                            { label: "Exposition", audio: "audio/EDM/0/mixed_0.mp3" },
-                            { label: "Exposition", audio: "audio/EDM/0/mixed_1.mp3" },
-                            { label: "Exposition", audio: "audio/EDM/0/mixed_2.mp3" },
-                            { label: "Exposition", audio: "audio/EDM/0/mixed_3.mp3" },
-                            { label: "Exposition", audio: "audio/EDM/0/mixed_4.mp3" },
-                            
-                            
-                        ]
-                    }
-                }
+               
             ];
 
             let currentExample = 0;
