@@ -563,28 +563,72 @@
                     }
                 },
                 {
-                    title: "Electronic Dance",
-                    description: "Building an EDM track with synthesizers and electronic beats",
+                    title: "Electronic Dance Music",
+                    description: "Building an EDM track with synthesizers and orchestral sound",
                     steps: [
                         {
                             stepNumber: 1,
-                            prompt: "Create a four-on-the-floor kick drum pattern",
-                            answer: "I'll create a punchy electronic kick pattern that's perfect for the dancefloor with proper sidechain compression.",
+                            prompt: "I want to make EDM music with a grand orchestral sound.",
+                            answer: "Okay, since you said, 'I want to make EDM music with a grand orchestral sound, I've prepared two rhythm tracks that will capture that feeling!\n\nThe section we're working on right now is the 'Chorus / Drop' section, which is the core of the song.\n\nThe first option is a strong and powerful 4/4 kick drum-centered rhythm with a harmony of electronic drums and percussion. This rhythm really captures the grand atmosphere and the energy that is unique to EDM.\n\nThe second option is a rhythm with a trap-style groove. The sharp blend of claps, hi-hats, kicks, and rims adds a bit more modern and sophisticated feel.\n\nSince this is the first section of our song, I think the first option will be a good fit because it has a big impact and definitely shows the energy of EDM. What do you think?\n\nPlease choose a rhythm you like among these, or let me know if you have any new ideas!",
                             audioResults: [
-                                { label: "Kick 1", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
-                                { label: "Kick 2", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
-                                { label: "Kick 3", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" },
-                                { label: "Kick 4", generated: "audio/placeholder.mp3", reference: "audio/placeholder.mp3" }
+                                { label: "Drums 1", generated: "audio/EDM/1/920be137-0c00-444c-8c72-19bac9735904-stem-0-rhythm.aac", reference: "audio/EDM/1/reference/b005734_justalight-h-rhythm.aac" },
+                                { label: "Drums 2", generated: "audio/EDM/1/not_selected/920be137-0c00-444c-8c72-19bac9735904-stem-1-rhythm.aac", reference: "audio/EDM/1/reference/b000392_honestly-b-rhythm.aac" },
+                             
                             ],
-                            selectedOutput: { audio: "audio/placeholder.mp3", name: "[Kick 1]" }
+                            selectedOutput: { audio: "audio/placeholder.mp3", name: "[None]" }
+                        },
+                        {
+                            stepNumber: 2,
+                            prompt: "the first one is good'",
+                            answer: "Okay, since you said 'the first one is good', I'll go with that! 🎶\n\nThe first option I've presented this time is a powerful one that perfectly complements the epic orchestral sound while creating deep and intense lows with the sub bass and synth bass. The warm sub resonance and textured synth bass maximize the dramatic energy, definitely bringing out the grandeur you can feel in a festival drop.\n\nOur track already has a solid and vibrant drum sound, so I think adding this powerful bass will definitely increase the weight and immersion of the sound. I'm looking forward to completing the chorus with this combination and making a really impressive drop!\n\nCan we go with the first bass as is, or do you have any other ideas? If you have any concerns, please let me know!",
+                            audioResults: [
+                                { label: "Bass 1", generated: "audio/EDM/1/5d74074d-0eb3-4e16-abd5-34255210e020-stem-0-low.aac", reference: "audio/EDM/1/reference/p000902_exmachina-d-low.aac" },
+                                { label: "Bass 2", generated: "audio/EDM/1/not_selected/5d74074d-0eb3-4e16-abd5-34255210e020-stem-1-low.aac", reference: "audio/EDM/1/reference/p000858_moon-a-low.aac" },
+                             
+                            ],
+                            selectedOutput: { audio: "audio/EDM/1/920be137-0c00-444c-8c72-19bac9735904-stem-0-rhythm.aac", name: "[Drums 1]" }
+                        },
+                        {
+                            stepNumber: 3,
+                            prompt: "the first one is good'",
+                            answer: "Okay, I'll reflect your choice right away! 😊\n\nThis option brings out the drama and energy of the song with its bright and brilliant orchestral strings and synth leads. You can feel the emotion and grandeur at the same time, as if it's exploding at the climax of a festival!\n\nThe track already has dynamic drums, deep and rich bass, and emotional strings, so I think the song will sound much more gorgeous and complete if the high layer of option 1 is layered on top of all of these elements. I think this combination will create a really great synergy!\n\nNow, let's move on to the next section. Let me know if you have any suggestions for parts you'd like me to try!",
+                            audioResults: [
+                                { label: "Strings 1", generated: "audio/EDM/1/d0036e48-ea60-4c13-9b6d-bccfc6753a18-stem-0-mid.aac", reference: "audio/EDM/1/reference/p000562_metalheart-d-mid.aac" },
+                                { label: "Strings 2", generated: "audio/EDM/1/not_selected/d0036e48-ea60-4c13-9b6d-bccfc6753a18-stem-1-mid.aac", reference: "audio/EDM/1/reference/p000500_todayshighlight-b-mid.aac" },
+                             
+                            ],
+                            selectedOutput: { audio: "audio/EDM/1/drums_bass.mp3", name: "[Drums 1, Bass 1]" }
+                        },
+                        {
+                            stepNumber: 4,
+                            prompt: "I want to use the first one",
+                            answer: "Okay, I'll reflect your choice right away! 😊\n\nThis option brings out the drama and energy of the song with its bright and brilliant orchestral strings and synth leads. You can feel the emotion and grandeur at the same time, as if it's exploding at the climax of a festival!\n\nThe track already has dynamic drums, deep and rich bass, and emotional strings, so I think the song will sound much more gorgeous and complete if the high layer of option 1 is layered on top of all of these elements. I think this combination will create a really great synergy!\n\nNow, let's move on to the next section. Let me know if you have any suggestions for parts you'd like me to try!",
+                            audioResults: [
+                                { label: "Strings 1", generated: "audio/EDM/1/not_selected/64f081ce-4a2b-44d3-92b6-aed455930456-stem-0-high.aac", reference: "audio/EDM/1/reference/b004268_allnight-f-high.aac" },
+                                { label: "Strings 2", generated: "audio/EDM/1/not_selected/64f081ce-4a2b-44d3-92b6-aed455930456-stem-1-high.aac", reference: "audio/EDM/1/reference/b004268_allnight-n-high.aac" },
+                             
+                            ],
+                            selectedOutput: { audio: "audio/EDM/1/drums_bass_strings.mp3", name: "[Drums 1, Bass 1, Strings 1]" }
+                        },
+                        {
+                            stepNumber: 5,
+                            prompt: "I want to create the next section of the current song",
+                            answer: "Okay, I'll reflect your choice right away! 😊\n\nThis option brings out the drama and energy of the song with its bright and brilliant orchestral strings and synth leads. You can feel the emotion and grandeur at the same time, as if it's exploding at the climax of a festival!\n\nThe track already has dynamic drums, deep and rich bass, and emotional strings, so I think the song will sound much more gorgeous and complete if the high layer of option 1 is layered on top of all of these elements. I think this combination will create a really great synergy!\n\nNow, let's move on to the next section. Let me know if you have any suggestions for parts you'd like me to try!",
+                            audioResults: [
+                                { label: "Strings 1", generated: "audio/EDM/1/not_selected/35f3f666-7ae1-4a11-a71a-5a1a49e1a11e-stem-0-rhythm.aac", reference: "audio/EDM/1/reference/b005734_justalight-d-rhythm.aac" },
+                                { label: "Strings 2", generated: "audio/EDM/1/not_selected/35f3f666-7ae1-4a11-a71a-5a1a49e1a11e-stem-1-rhythm.aac", reference: "audio/EDM/1/reference/b005734_justalight-b-rhythm.aac" },
+                             
+                            ],
+                            selectedOutput: { audio: "audio/EDM/1/drums_bass_strings.mp3", name: "[Drums 1, Bass 1, Strings 1]" }
                         }
                     ],
                     finalOutput: {
                         sections: [
-                            { label: "Intro", audio: "audio/placeholder.mp3" },
-                            { label: "Pre-Chorus / Build-Up", audio: "audio/placeholder.mp3" },
-                            { label: "Chorus / Drop", audio: "audio/placeholder.mp3" },
-                            { label: "Bridge / Breakdown", audio: "audio/placeholder.mp3" }
+                            { label: "Intro", audio: "audio/EDM/0/mixed_0.mp3" },
+                            { label: "Chorus / Drop", audio: "audio/EDM/1/mixed_1.mp3" },
+                            { label: "Verse", audio: "audio/EDM/2/mixed_2.mp3" },
+                            { label: "Bridge / Breakdown", audio: "audio/EDM/3/mixed_3.mp3" },
+                            { label: "Outro", audio: "audio/EDM/4/mixed_4.mp3" },
                         ]
                     }
                 },
@@ -633,10 +677,13 @@
                     ],
                     finalOutput: {
                         sections: [
-                            { label: "Exposition", audio: "audio/placeholder.mp3" },
-                            { label: "Development", audio: "audio/placeholder.mp3" },
-                            { label: "Recapitulation", audio: "audio/placeholder.mp3" },
-                            { label: "Coda", audio: "audio/placeholder.mp3" }
+                            { label: "Exposition", audio: "audio/EDM/0/mixed_0.mp3" },
+                            { label: "Exposition", audio: "audio/EDM/0/mixed_1.mp3" },
+                            { label: "Exposition", audio: "audio/EDM/0/mixed_2.mp3" },
+                            { label: "Exposition", audio: "audio/EDM/0/mixed_3.mp3" },
+                            { label: "Exposition", audio: "audio/EDM/0/mixed_4.mp3" },
+                            
+                            
                         ]
                     }
                 }
