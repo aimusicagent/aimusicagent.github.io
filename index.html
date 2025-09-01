@@ -415,82 +415,72 @@
             // 예시 데이터 구조
             const exampleData = [
                 {
-                    title: "Afrobeat Song Creation",
+                    title: "Latin Song Creation",
                     description: "Creating a afrobeat song with electronic sounds",
                     steps: [
                         {
                             stepNumber: 1,
-                            prompt: "Create an Afrobeat song with electronic sounds",
-                            answer: "Okay, since you said you wanted to make Afrobeat music, I prepared two rhythm tracks with that exact feeling! 🥁✨<br>I'm currently working on the verse section, so I approached it with a focus on percussion that would fit that mood.<br>The first option is a very energetic rhythm with congas, bongos, and djembe layered with hi-hats, snares, and kicks. The shakers and tambourines are naturally placed on top, creating an energetic yet smooth groove overall.<br>The second option is a warm and organic rhythm with a combination of kicks, snares, rims, hi-hats, bongos, and congas. The kick firmly holds the groove, and the overall vibe is more natural and refreshing.<br>Since the song is still in its infancy, I think the first option, which has a lot of energy, will suit the verse better! I think starting like this will immediately convey the liveliness that is characteristic of Afrobeat. What do you think?<br>Which rhythm do you like better, the first or the second, or should I try something completely different? Let me know what you think!",
+                            prompt: "Create a Latin song with energetic percussion and festive mood",
+                            answer: "Great! Since you said you wanted to create Latin music, I’ve prepared two rhythm tracks that capture exactly that festive atmosphere! 🥁✨ This time, I focused on Latin percussion instruments to bring out the lively, celebratory vibe.<br>The first option features a combination of clave, bongos, and congas layered with drums playing a Latin groove. The powerful drum patterns blend with the percussion to create an energetic and uplifting atmosphere—something that instantly makes you want to get up and dance on stage.<br>The second option is built mainly around percussion with a softer and warmer sound. It flows like a bossa nova, giving the track a relaxed yet joyful feel. With cajón, shakers, and gentle bongo rhythms at its core, it adds a laid-back and natural Latin flavor.<br>For the opening section of the track, I think the first option—with the strong interplay of clave and drums—would be more suitable to set the tone. It immediately delivers the vibrant joy that is characteristic of Latin music! Which rhythm do you prefer, the first or the second? Or would you like me to try a completely different direction?",
                             audioResults: [
-                                { label: "Percussion 1", generated: "audio/afrobeat/1-main/not_selected/6fed927d-5b6f-4425-bb71-e3cff9ceed9a-stem-0-rhythm.aac", reference: "audio/afrobeat/1-main/reference/b000767_quaking-c-rhythm.aac" },
-                                { label: "Percussion 2", generated: "audio/afrobeat/1-main/6fed927d-5b6f-4425-bb71-e3cff9ceed9a-stem-1-rhythm.aac", reference: "audio/afrobeat/1-main/reference/b003354_againandagain-a-rhythm.aac" },
+                                { label: "Percussion 1", generated: "audio/latin/step1_rhythm/GENERATED AUDIO/1_rhythm_selected.mp3", reference: "audio/latin/step1_rhythm/REFERENCE AUDIO/1_rhythm_selected.mp3" },
+                                { label: "Percussion 2", generated: "audio/latin/step1_rhythm/GENERATED AUDIO/2_rhythm_unselected.mp3", reference: "audio/latin/step1_rhythm/REFERENCE AUDIO/2_rhythm_unselected.mp3" },
                             ],
                             selectedOutput: { audio: "audio/placeholder.mp3", name: "[None]" }
                         },
                         {
                             stepNumber: 2,
-                            prompt: "I want to select the second suggested rhythm/percussion stem",
-                            answer: "Okay, you just said you liked the second one, so I've been thinking about it! 🥁<br>I've come up with two basslines that would go well with the rhythm/percussion you chose this time.<br>The first is an 808 bass, with a deep, warm low-end that firmly establishes the groove of the track while laying down smoothly. It'll create a rich, immersive atmosphere for the song.<br>The second is a synth bass, with a soft, vibrant tone that mixes traditional Afrobeat with an Afro-Cuban feel. The rhythmic syncopation and melody add to the overall lively, groovy vibe!<br>Since we only have percussion, I think the second synth bass, which can bring out the overall energy and liveliness, would be a better fit for our current goal. It'll definitely capture the characteristic upbeat and soulfulness of Afrobeat!<br>Which bassline do you prefer, or should we try something new? Let me know what you think.",
+                            prompt: "I want to select the first suggested rhythm/percussion stem",
+                            answer: "Great, you’ve chosen the first rhythm! 🥁✨ Now, I’ve prepared two bassline options that would go well with that rhythm.<br>The first option is an acoustic contrabass, commonly heard in Latin jazz bands. It plays in a lively and rhythmic style that emphasizes the groove of the entire track. It blends cheerfully with the percussion to create a strong, festive atmosphere.<br>The second option is also an acoustic contrabass, but this time it’s played in a warmer and softer style. It flows smoothly and supports the track with a sense of calm and stability, adding a relaxed, mellow character overall.<br>Since the clave, bongos, and drums already bring a lot of energy and excitement to the song, I think the first contrabass fits more naturally. However, if you’re looking for a more laid-back and emotional flow, the second bass would be a great choice as well.<br>Which bassline do you prefer—the first or the second? Or would you like to explore a different direction altogether?",
                             audioResults: [
-                                { label: "Bass 1", generated: "audio/afrobeat/1-main/679fcbf6-6571-4781-bb20-be11c56d487f-stem-0-low.aac", reference: "audio/afrobeat/1-main/reference/b004472_faces-i-low.aac" },
-                                { label: "Bass 2", generated: "audio/afrobeat/1-main/not_selected/679fcbf6-6571-4781-bb20-be11c56d487f-stem-1-low.aac", reference: "audio/afrobeat/1-main/reference/b004045_ambientebp-d-low.aac" },
+                                { label: "Bass 1", generated: "audio/latin/step2_bass/GENERATED AUDIO/1_low_selected.mp3", reference: "audio/latin/step2_bass/REFERENCE AUDIO/1_low_selected.mp3" },
+                                { label: "Bass 2", generated: "audio/latin/step2_bass/GENERATED AUDIO/2_low_unselected.mp3", reference: "audio/latin/step2_bass/REFERENCE AUDIO/2_low_unselected.mp3" },
                                 
                             ],
-                            selectedOutput: { audio: "audio/afrobeat/1-main/6fed927d-5b6f-4425-bb71-e3cff9ceed9a-stem-1-rhythm.aac", name: "[Percussion 2]" }
+                            selectedOutput: { audio: "audio/afrobeat/1-main/6fed927d-5b6f-4425-bb71-e3cff9ceed9a-stem-1-rhythm.aac", name: "[Percussion 1]" }
                         },
                         {
                             stepNumber: 3,
                             prompt: "I want to use the first suggested bass",
-                            answer: "Okay, since you chose the first bass, I've prepared some guitar riff ideas right away! 🎸<br>The first guitar option is a neo-soul style with warm and soft strumming. Bright-toned strums surround the rhythm, while the leisurely melody line adds a warm feeling to the song.<br>The second option is a cheerful and funky guitar riff that is characteristic of Afrobeat. The fast, clear strumming and clever single notes combine to bring the track to life.<br>Our track has a nice groove so far with the percussion and 808 bass, so I think the second, more rhythmic guitar would really liven up the overall vibe. What do you think?<br>You can choose whichever you like better between the first and second options, or you can suggest a new direction!",
+                            answer: "Great! You’ve chosen the first bass option 🎶 Now, I’ve thought about what instrument could enrich the melody and harmony of the track. I’ve prepared two ideas for you.<br>The first option is a Latin-style guitar performance. Its soft, rhythmic strumming and arpeggios blend naturally with the bass, bringing a warm emotional feel. It enhances the groove without being overly flashy, adding a relaxed and smooth flow to the track.<br>The second option is a classic Latin rhythm piano, playing upbeat, repetitive chord patterns that lock in with the rhythm section. This style highlights the groove and energy that are characteristic of Latin music, playing a key role in giving the track a more traditional Latin sound.<br>Since the bass and percussion are already driving the energy of the song, I think the second piano option would complete the arrangement in a more authentic Latin way. But if you’re looking for something softer and warmer, the first guitar option would also be a great choice.<br>Which direction do you prefer—the gentle rhythm of the guitar or the traditional Latin groove of the piano?",
                             audioResults: [
-                                { label: "Guitar 1", generated: "audio/afrobeat/1-main/not_selected/2a10abcf-aec8-431f-a6df-c51c997da288-stem-0-mid.aac", reference: "audio/afrobeat/1-main/reference/b004317_soultrain-k-mid.aac" },
-                                { label: "Guitar 2", generated: "audio/afrobeat/1-main/not_selected/2a10abcf-aec8-431f-a6df-c51c997da288-stem-1-mid.aac", reference: "audio/afrobeat/1-main/reference/b004784_mindful-i-mid.aac" },
+                                { label: "Guitar 1", generated: "audio/latin/step3_mid/GENERATED AUDIO/1_mid_unselected.mp3", reference: "audio/latin/step3_mid/REFERENCE AUDIO/1_mid_unselected.mp3" },
+                                { label: "Guitar 2", generated: "audio/latin/step3_mid/GENERATED AUDIO/2_mid_selected.mp3", reference: "audio/latin/step3_mid/REFERENCE AUDIO/2_mid_selected.mp3" },
                                  
                             ],
-                            selectedOutput: { audio: "audio/afrobeat/1-main/mixed/percussion_bass.mp3", name: "[Percussion 2, Bass 1]" }
+                            selectedOutput: { audio: "audio/latin/step3_mid/MIXED AUDIO/MIXED AUDIO(Rhy_Low).mp3", name: "[Percussion 1, Bass 1]" }
                         },
                         {
                             stepNumber: 4,
-                            prompt: "Hmm.. I want to add EDM-style sound to the current Afrobeat-based mix",
-                            answer: "Okay, since you said you wanted an EDM-style sound, I prepared two different synth layers! <br>The first option has the crisp, bright tones of the pluck synth that cut through the rhythm tightly, creating an energetic atmosphere. This is combined with the mallet marimba and ethereal synth vocals, creating a groovy Afrobeat that also has a dreamy feel.<br>The second option has the pad synth enveloping the entire song with warm, lush textures, while the lead synth adds a bright, striking melody. The arpeggiator synth provides a sparkling rhythm and gives the track a modern dance vibe.<br>Our track is currently anchored by organic percussion and 808 bass, so I think the first pluck synth option adds liveliness to the rhythm and captures the unique energy of EDM the best! What do you think?<br>Please choose whichever you prefer, or let me know if you have any new ideas!",
+                            prompt: "I want to use the second suggested harmony, and now I want to add a high-register instrument that fits well with the track",
+                            answer: "Great! Now you’d like to add a high-register instrument to make the sound even richer. I’ve prepared two options for you.<br>The first option is marimba and bell-like instruments. These are commonly used in Latin music, and their bright, crisp tones fill the upper register of the track. When the marimba plays repeating patterns over the rhythm and piano, it brings out an even brighter and more festive energy.<br>The second option is a combination of guitar and flute. The guitar plays short riffs in the higher register to keep the rhythm alive, while the flute adds soft, refreshing melodies. Together, they create a warm and expressive Latin atmosphere.<br>Since the rhythm and piano are already giving the song a lot of drive and energy, I think the first marimba-and-bell sound would strengthen the “classic Latin” character. But if you’d prefer a more emotional and gentle flow, the second guitar-and-flute combination would also be a very appealing choice.<br>Which high-register instrument do you prefer—the lively sparkle of marimba and bells, or the warm blend of guitar and flute?",
                             audioResults: [
-                                { label: "Lead 1", generated: "audio/afrobeat/1-main/not_selected/3ea9c1b2-b95d-4d7a-93ee-e98ac7307a28-stem-0-mid.aac", reference: "audio/afrobeat/1-main/reference/m000380_shadow_3-c-mid.aac" },
-                                { label: "Lead 2", generated: "audio/afrobeat/1-main/3ea9c1b2-b95d-4d7a-93ee-e98ac7307a28-stem-1-mid.aac", reference: "audio/afrobeat/1-main/reference/b004705_family-b-mid.aac" },
+                                { label: "Bell 1", generated: "audio/latin/step4_high/GENERATED AUDIO/1_high_selected.mp3", reference: "audio/latin/step4_high/REFERENCE AUDIO/1_high_selected.mp3" },
+                                { label: "Flute 1", generated: "audio/latin/step4_high/GENERATED AUDIO/2_high_unselected.mp3", reference: "audio/latin/step4_high/REFERENCE AUDIO/2_high_unselected.mp3" },
                                 
                             ],
-                            selectedOutput: { audio: "audio/afrobeat/1-main/mixed/percussion_bass.mp3", name: "[Percussion 2, Bass 1]" }
+                            selectedOutput: { audio: "audio/latin/step4_high/MIXED AUDIO/MIXED AUDIO(Rhy_Low_Mid).mp3", name: "[Percussion 2, Bass 1, Guitar 2]" }
                         },
                         {
                             stepNumber: 5,
-                            prompt: "I like 2nd synth stem, and please add a strong EDM sound in the high frequency range",
-                            answer: "Yes, I tried to capture that feeling! I'm currently working on the verse section, and I've prepared two high parts that will go well with it.<br>The first one creates a dreamy and airy layer of synth vocals. The warm and energetic lead synth melody is mixed with lush strings, adding a future bass feel to the Afrobeat-based groove.<br>The second one adds natural warmth with bright and clear strokes of acoustic guitar. The airy texture of the synth vocals is layered over this, creating an overall warm and modern EDM mood.<br>The track already has rhythmic percussion, deep 808 bass, lush synths, and dreamy high synth vocals, so I think the first option fits best, adding the characteristic EDM energy and dreamy atmosphere! 🕺✨<br>Which option do you like better? Or maybe you'd like to try something different?",
+                            prompt: "I want to use the first suggested high-register instrument (marimba and bell sounds).",
+                            answer: "Great! You’ve chosen the first high-register option—marimba and bell sounds 🔔✨ These instruments add a bright and warm character to the track, naturally breathing life into the music as they play over the rhythm and piano. They help highlight the joyful and festive atmosphere that’s so iconic in Latin music.<br>So far, the percussion, contrabass, and piano montuno are already working together in harmony. Now, with the addition of the marimba and bells, the overall sound has become even richer and fuller. It's the perfect choice to capture that vibrant, celebratory Latin vibe! 🎶<br>Do you have any other ideas you'd like to explore? Or shall we move on to creating the next section—maybe the chorus or the bridge?",
                             audioResults: [
                                 { label: "SYNTH 1", generated: "audio/afrobeat/1-main/not_selected/f45656c4-9b1b-4793-aaf8-0b757cfc1a08-stem-0-high.aac", reference: "audio/afrobeat/1-main/reference/b002192_loveless-b-high.aac" },
                                 { label: "SYNTH 2", generated: "audio/afrobeat/1-main/f45656c4-9b1b-4793-aaf8-0b757cfc1a08-stem-1-high.aac", reference: "audio/afrobeat/1-main/reference/p000372_ontherock-a-high.aac" },
                                 
                             ],
-                            selectedOutput: { audio: "audio/afrobeat/1-main/mixed/percussion_bass_lead.mp3", name: "[Percussion 2, Bass 1, Lead 2]" }
+                            selectedOutput: { audio: "audio/afrobeat/1-main/mixed/percussion_bass_lead.mp3", name: "[Percussion 2, Bass 1, Guitar 2, Bell 1]" }
                         },
-                        {
-                            stepNumber: 6,
-                            prompt: "Good, let's use the second stem. After that, I want to create a new section.",
-                            answer: "Okay, you chose the second synth option! This synth adds a natural emotional feel to the song with its bright, warm strums. It feels like it organically brings life to the track when paired with the electronic elements.<br>With the harmonious mix of synths, bass, percussion, and synth vocals already in the song, I think this guitar will enrich the overall sound. It's the perfect choice to capture the vibrant vibe of Afrobeat and EDM that we're aiming for!<br>If you have any other ideas, please let me know. Or should we just create the next section?",
-                            audioResults: [
-                                { label: "SYNTH 1", generated: "audio/afrobeat/1-main/not_selected/f45656c4-9b1b-4793-aaf8-0b757cfc1a08-stem-0-high.aac", reference: "audio/afrobeat/1-main/reference/b003700_tellit-j-high.aac" },
-                                { label: "SYNTH 2", generated: "audio/afrobeat/1-main/f45656c4-9b1b-4793-aaf8-0b757cfc1a08-stem-1-high.aac", reference: "audio/afrobeat/1-main/reference/b006201_ridewithme-h-high.aac" },
-                                
-                            ],
-                            selectedOutput: { audio: "audio/afrobeat/1-main/mixed/percussion_bass_lead_synth.mp3", name: "[Percussion 2, Bass 1, Lead 2, Synth 2]" }
-                        }
                     ],
                     finalOutput: {
                         sections: [
-                            { label: "Intro", audio: "audio/afrobeat/0/mixed_0.mp3" },
-                            { label: "Verse", audio: "audio/afrobeat/1-main/mixed/percussion_bass_lead_synth.mp3" },
-                            { label: "Chorus/Drop", audio: "audio/afrobeat/2/mixed_2.mp3" },
-                            { label: "Chorus/Drop", audio: "audio/afrobeat/3/mixed_3.mp3" },
-                            { label: "Outro", audio: "audio/afrobeat/4/mixed_4.mp3" },
+                            
+                            { label: "Verse", audio: "audio/latin/step6_final result of latin making/verse.mp3" },
+                            { label: "Pre-Chorus / Build-Up", audio: "audio/latin/step6_final result of latin making/prechorus.mp3" },
+                            { label: "Chorus/Drop", audio: "audio/latin/step6_final result of latin making/chorus.mp3" },
+                            { label: "Bridge/Breakdown", audio: "audio/latin/step6_final result of latin making/bridge.mp3" },
+                            
                         ]
                     }
                 },
@@ -702,7 +692,87 @@
                         ]
                     }
                 },
-               
+                {
+                    title: "Afrobeat Song Creation",
+                    description: "Creating a afrobeat song with electronic sounds",
+                    steps: [
+                        {
+                            stepNumber: 1,
+                            prompt: "Create an Afrobeat song with electronic sounds",
+                            answer: "Okay, since you said you wanted to make Afrobeat music, I prepared two rhythm tracks with that exact feeling! 🥁✨<br>I'm currently working on the verse section, so I approached it with a focus on percussion that would fit that mood.<br>The first option is a very energetic rhythm with congas, bongos, and djembe layered with hi-hats, snares, and kicks. The shakers and tambourines are naturally placed on top, creating an energetic yet smooth groove overall.<br>The second option is a warm and organic rhythm with a combination of kicks, snares, rims, hi-hats, bongos, and congas. The kick firmly holds the groove, and the overall vibe is more natural and refreshing.<br>Since the song is still in its infancy, I think the first option, which has a lot of energy, will suit the verse better! I think starting like this will immediately convey the liveliness that is characteristic of Afrobeat. What do you think?<br>Which rhythm do you like better, the first or the second, or should I try something completely different? Let me know what you think!",
+                            audioResults: [
+                                { label: "Percussion 1", generated: "audio/afrobeat/1-main/not_selected/6fed927d-5b6f-4425-bb71-e3cff9ceed9a-stem-0-rhythm.aac", reference: "audio/afrobeat/1-main/reference/b000767_quaking-c-rhythm.aac" },
+                                { label: "Percussion 2", generated: "audio/afrobeat/1-main/6fed927d-5b6f-4425-bb71-e3cff9ceed9a-stem-1-rhythm.aac", reference: "audio/afrobeat/1-main/reference/b003354_againandagain-a-rhythm.aac" },
+                            ],
+                            selectedOutput: { audio: "audio/placeholder.mp3", name: "[None]" }
+                        },
+                        {
+                            stepNumber: 2,
+                            prompt: "I want to select the second suggested rhythm/percussion stem",
+                            answer: "Okay, you just said you liked the second one, so I've been thinking about it! 🥁<br>I've come up with two basslines that would go well with the rhythm/percussion you chose this time.<br>The first is an 808 bass, with a deep, warm low-end that firmly establishes the groove of the track while laying down smoothly. It'll create a rich, immersive atmosphere for the song.<br>The second is a synth bass, with a soft, vibrant tone that mixes traditional Afrobeat with an Afro-Cuban feel. The rhythmic syncopation and melody add to the overall lively, groovy vibe!<br>Since we only have percussion, I think the second synth bass, which can bring out the overall energy and liveliness, would be a better fit for our current goal. It'll definitely capture the characteristic upbeat and soulfulness of Afrobeat!<br>Which bassline do you prefer, or should we try something new? Let me know what you think.",
+                            audioResults: [
+                                { label: "Bass 1", generated: "audio/afrobeat/1-main/679fcbf6-6571-4781-bb20-be11c56d487f-stem-0-low.aac", reference: "audio/afrobeat/1-main/reference/b004472_faces-i-low.aac" },
+                                { label: "Bass 2", generated: "audio/afrobeat/1-main/not_selected/679fcbf6-6571-4781-bb20-be11c56d487f-stem-1-low.aac", reference: "audio/afrobeat/1-main/reference/b004045_ambientebp-d-low.aac" },
+                                
+                            ],
+                            selectedOutput: { audio: "audio/afrobeat/1-main/6fed927d-5b6f-4425-bb71-e3cff9ceed9a-stem-1-rhythm.aac", name: "[Percussion 2]" }
+                        },
+                        {
+                            stepNumber: 3,
+                            prompt: "I want to use the first suggested bass",
+                            answer: "Okay, since you chose the first bass, I've prepared some guitar riff ideas right away! 🎸<br>The first guitar option is a neo-soul style with warm and soft strumming. Bright-toned strums surround the rhythm, while the leisurely melody line adds a warm feeling to the song.<br>The second option is a cheerful and funky guitar riff that is characteristic of Afrobeat. The fast, clear strumming and clever single notes combine to bring the track to life.<br>Our track has a nice groove so far with the percussion and 808 bass, so I think the second, more rhythmic guitar would really liven up the overall vibe. What do you think?<br>You can choose whichever you like better between the first and second options, or you can suggest a new direction!",
+                            audioResults: [
+                                { label: "Guitar 1", generated: "audio/afrobeat/1-main/not_selected/2a10abcf-aec8-431f-a6df-c51c997da288-stem-0-mid.aac", reference: "audio/afrobeat/1-main/reference/b004317_soultrain-k-mid.aac" },
+                                { label: "Guitar 2", generated: "audio/afrobeat/1-main/not_selected/2a10abcf-aec8-431f-a6df-c51c997da288-stem-1-mid.aac", reference: "audio/afrobeat/1-main/reference/b004784_mindful-i-mid.aac" },
+                                 
+                            ],
+                            selectedOutput: { audio: "audio/afrobeat/1-main/mixed/percussion_bass.mp3", name: "[Percussion 2, Bass 1]" }
+                        },
+                        {
+                            stepNumber: 4,
+                            prompt: "Hmm.. I want to add EDM-style sound to the current Afrobeat-based mix",
+                            answer: "Okay, since you said you wanted an EDM-style sound, I prepared two different synth layers! <br>The first option has the crisp, bright tones of the pluck synth that cut through the rhythm tightly, creating an energetic atmosphere. This is combined with the mallet marimba and ethereal synth vocals, creating a groovy Afrobeat that also has a dreamy feel.<br>The second option has the pad synth enveloping the entire song with warm, lush textures, while the lead synth adds a bright, striking melody. The arpeggiator synth provides a sparkling rhythm and gives the track a modern dance vibe.<br>Our track is currently anchored by organic percussion and 808 bass, so I think the first pluck synth option adds liveliness to the rhythm and captures the unique energy of EDM the best! What do you think?<br>Please choose whichever you prefer, or let me know if you have any new ideas!",
+                            audioResults: [
+                                { label: "Lead 1", generated: "audio/afrobeat/1-main/not_selected/3ea9c1b2-b95d-4d7a-93ee-e98ac7307a28-stem-0-mid.aac", reference: "audio/afrobeat/1-main/reference/m000380_shadow_3-c-mid.aac" },
+                                { label: "Lead 2", generated: "audio/afrobeat/1-main/3ea9c1b2-b95d-4d7a-93ee-e98ac7307a28-stem-1-mid.aac", reference: "audio/afrobeat/1-main/reference/b004705_family-b-mid.aac" },
+                                
+                            ],
+                            selectedOutput: { audio: "audio/afrobeat/1-main/mixed/percussion_bass.mp3", name: "[Percussion 2, Bass 1]" }
+                        },
+                        {
+                            stepNumber: 5,
+                            prompt: "I like 2nd synth stem, and please add a strong EDM sound in the high frequency range",
+                            answer: "Yes, I tried to capture that feeling! I'm currently working on the verse section, and I've prepared two high parts that will go well with it.<br>The first one creates a dreamy and airy layer of synth vocals. The warm and energetic lead synth melody is mixed with lush strings, adding a future bass feel to the Afrobeat-based groove.<br>The second one adds natural warmth with bright and clear strokes of acoustic guitar. The airy texture of the synth vocals is layered over this, creating an overall warm and modern EDM mood.<br>The track already has rhythmic percussion, deep 808 bass, lush synths, and dreamy high synth vocals, so I think the first option fits best, adding the characteristic EDM energy and dreamy atmosphere! 🕺✨<br>Which option do you like better? Or maybe you'd like to try something different?",
+                            audioResults: [
+                                { label: "SYNTH 1", generated: "audio/afrobeat/1-main/not_selected/f45656c4-9b1b-4793-aaf8-0b757cfc1a08-stem-0-high.aac", reference: "audio/afrobeat/1-main/reference/b002192_loveless-b-high.aac" },
+                                { label: "SYNTH 2", generated: "audio/afrobeat/1-main/f45656c4-9b1b-4793-aaf8-0b757cfc1a08-stem-1-high.aac", reference: "audio/afrobeat/1-main/reference/p000372_ontherock-a-high.aac" },
+                                
+                            ],
+                            selectedOutput: { audio: "audio/afrobeat/1-main/mixed/percussion_bass_lead.mp3", name: "[Percussion 2, Bass 1, Lead 2]" }
+                        },
+                        {
+                            stepNumber: 6,
+                            prompt: "Good, let's use the second stem. After that, I want to create a new section.",
+                            answer: "Okay, you chose the second synth option! This synth adds a natural emotional feel to the song with its bright, warm strums. It feels like it organically brings life to the track when paired with the electronic elements.<br>With the harmonious mix of synths, bass, percussion, and synth vocals already in the song, I think this guitar will enrich the overall sound. It's the perfect choice to capture the vibrant vibe of Afrobeat and EDM that we're aiming for!<br>If you have any other ideas, please let me know. Or should we just create the next section?",
+                            audioResults: [
+                                { label: "SYNTH 1", generated: "audio/afrobeat/1-main/not_selected/f45656c4-9b1b-4793-aaf8-0b757cfc1a08-stem-0-high.aac", reference: "audio/afrobeat/1-main/reference/b003700_tellit-j-high.aac" },
+                                { label: "SYNTH 2", generated: "audio/afrobeat/1-main/f45656c4-9b1b-4793-aaf8-0b757cfc1a08-stem-1-high.aac", reference: "audio/afrobeat/1-main/reference/b006201_ridewithme-h-high.aac" },
+                                
+                            ],
+                            selectedOutput: { audio: "audio/afrobeat/1-main/mixed/percussion_bass_lead_synth.mp3", name: "[Percussion 2, Bass 1, Lead 2, Synth 2]" }
+                        }
+                    ],
+                    finalOutput: {
+                        sections: [
+                            { label: "Intro", audio: "audio/afrobeat/0/mixed_0.mp3" },
+                            { label: "Verse", audio: "audio/afrobeat/1-main/mixed/percussion_bass_lead_synth.mp3" },
+                            { label: "Chorus/Drop", audio: "audio/afrobeat/2/mixed_2.mp3" },
+                            { label: "Chorus/Drop", audio: "audio/afrobeat/3/mixed_3.mp3" },
+                            { label: "Outro", audio: "audio/afrobeat/4/mixed_4.mp3" },
+                        ]
+                    }
+                },
+                            
             ];
 
             let currentExample = 0;
